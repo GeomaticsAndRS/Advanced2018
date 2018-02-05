@@ -67,9 +67,9 @@
                 // 切片规则
                 tileGrid: new ol.tilegrid.TileGrid({
                     resolutions: bmercResolutions,
-                    origin: [0, 0],
+                    origin: [0, 0], // 坐标原点
                     extent: ol.extent.applyTransform(extent, projzh.ll2bmerc),
-                    tileSize: [256, 256]
+                    tileSize: [256, 256] // 瓦片大小
                 }),
                 // 切片格式
                 tileUrlFunction: function (tileCoord) {
