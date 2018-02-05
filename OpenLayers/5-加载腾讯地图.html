@@ -5,11 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>加载在线地图</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <title>加载腾讯地图</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
     <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
-    <script src="js/ol.source.TianDiMap.js"></script>
     <style>
         html, body, #map {
             width: 100%;
@@ -18,32 +16,17 @@
             padding: 0;
             overflow: hidden;
         }
-
-        .form-control {
-            position: absolute;
-            top: 10px;
-            left: 60px;
-            width: 100px;
-        }
     </style>
 </head>
 <body>
 <!--地图容器-->
 <div id="map" class="map"></div>
-<select class="form-control">
-    <optgroup label="国外">
-        <option>ArcGIS</option>
-        <option>OSM</option>
-        <option>Google</option>
-    </optgroup>
-    <optgroup label="国内">
-        <option>百度</option>
-        <option>高德</option>
-        <option>天地图</option>
-        <option>腾讯</option>
-    </optgroup>
-</select>
 <script>
+
+    // 地图 = http://rt2.map.gtimg.com/tile/?z=" + z + "&x=" + x + "&y=" + y
+    // 卫星 = http://p0.map.gtimg.com/sateTiles/" + z + "/" + Math.floor(x / 16) + "/" + Math.floor(y / 16.0) + "/" + x + "_" + y + ".jpg?version=229
+    // 卫星标注 = http://rt1.map.gtimg.com/tile?z=" + z + "&x=" + x + "&y=" + y + "&styleid=2&version=259
+
     // 创建一个Map对象
     var map = new ol.Map({
         // 图层(数据)
@@ -51,14 +34,15 @@
             // Tile(瓦片类型图层)
             new ol.layer.Tile({
                 // 瓦片数据源
-                source: new ol.source.TianDiMap({
-                    mapType: "地图"
-                })
-            }),
-            new ol.layer.Tile({
-                // 瓦片数据源
-                source: new ol.source.TianDiMap({
-                    mapType: "地图标签"
+                source: new ol.source.XYZ({
+                    // 自定义切片格式
+                    tileUrlFunction:function (tileCoord) {
+                        var x = tileCoord[1];
+                        var y = tileCoord[2];
+                        var z = tileCoord[0];
+                        y = (Math.pow(2, z)) - 1 + y;
+                        return "http://rt2.map.gtimg.com/tile/?z=" + z + "&x=" + x + "&y=" + y;
+                    }
                 })
             })
         ],
@@ -68,7 +52,7 @@
         view: new ol.View({
             // 地图中心点（默认为EPSG:3857坐标系统），需要EPSG:4326经纬度转换
             center: ol.proj.fromLonLat([114.311831, 30.584501]),
-            zoom: 12
+            zoom: 14
         })
     });
 </script>

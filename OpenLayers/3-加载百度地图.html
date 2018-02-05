@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>加载百度地图</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+    <script src="js/baidumap.js"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--地图容器-->
+<div id="map" class="map"></div>
+<script>
+
+    // WGS84坐标系转为百度BD墨卡托坐标系
+    // WGS-84 -> BD-09 -> Baidu Mercator
+    // baiduMercator.forward(bd09.fromWGS84(point))
+
+    // 百度BD墨卡托坐标系WGS84坐标系转为
+    // Baidu Mercator -> BD-09 -> WGS-84
+    // bd09.toWGS84(baiduMercator.inverse(point))
+
+    // 电子地图：http://online3.map.bdimg.com/onlinelabel/?qt=tile&x="+x+"&y="+y+"&z="+z+"&styles=pl&udt=20151021&scaler=1&p=1
+    // 卫星：https://ss0.bdstatic.com/8bo_dTSlR1gBo1vgoIiO_jowehsv/starpic/?qt=satepc&u=x=" + x + ";y=" + y + ";z=" + z + ";v=009;type=sate&fm=46&app=webearth2&v=009&udt=20180201
+    // 路网：https://ss0.bdstatic.com/8bo_dTSlR1gBo1vgoIiO_jowehsv/onlinelabel/?qt=tile&x=" + x + "&y=" + y + "&z=" + z + "&styles=sl&p=0&v=083&udt=20180201
+
+    // 中国区范围
+    var extent = [72.004, 0.8293, 137.8347, 55.8271];
+
+    // 自定义百度地图坐标系
+    var baiduMercatorProj = new ol.proj.Projection({
+        code: 'baidu', // 身份标识符
+        extent: ol.extent.applyTransform(extent, projzh.ll2bmerc), // extent transformFn
+        units: 'm'
+    });
+
+    // 添加一个自定义坐标到ol所支持的坐标系列表中，并通过code来辨别查找
+    ol.proj.addProjection(baiduMercatorProj);
+    // 注册坐标转换（4326到百度墨卡托）
+    ol.proj.addCoordinateTransforms('EPSG:4326', baiduMercatorProj, projzh.ll2bmerc, projzh.bmerc2ll); // source destination forward inverse
+    // 注册坐标转换（3857到百度墨卡托）
+    ol.proj.addCoordinateTransforms('EPSG:3857', baiduMercatorProj, projzh.smerc2bmerc, projzh.bmerc2smerc);
+
+    // 百度墨卡托坐标系分辨率，共18级
+    var bmercResolutions = new Array(19);
+    for (var i = 0; i < 19; ++i) {
+        bmercResolutions[i] = Math.pow(2, 18 - i);
+    }
+
+    var map = new ol.Map({
+        layers: [new ol.layer.Tile({
+            source: new ol.source.XYZ({
+                // 百度坐标系（重要，必须）
+                projection: 'baidu',
+                // 切片规则
+                tileGrid: new ol.tilegrid.TileGrid({
+                    resolutions: bmercResolutions,
+                    origin: [0, 0],
+                    extent: ol.extent.applyTransform(extent, projzh.ll2bmerc),
+                    tileSize: [256, 256]
+                }),
+                // 切片格式
+                tileUrlFunction: function (tileCoord) {
+                    var x = tileCoord[1];
+                    var y = tileCoord[2];
+                    var z = tileCoord[0];
+                    return "http://online3.map.bdimg.com/onlinelabel/?qt=tile&x=" + x + "&y=" + y + "&z=" + z + "&styles=pl&udt=20170301&scaler=1&p=1";
+                }
+            })
+        })],
+        // 对应的dom元素
+        target: 'map',
+        view: new ol.View({
+            center: ol.proj.transform([114.311831, 30.584501], 'EPSG:4326', 'EPSG:3857'),
+            zoom: 14,
+            maxZoom: 18,
+            projection: 'EPSG:3857'
+        })
+    });
+</script>
+</body>
+</html>

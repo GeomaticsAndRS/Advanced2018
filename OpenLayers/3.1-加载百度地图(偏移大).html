@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>加载百度地图</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--地图容器-->
+<div id="map" class="map"></div>
+<script>
+    var projection = ol.proj.get("EPSG:3857");
+    var resolutions = [];
+    for (var i = 0; i < 19; i++) {
+        resolutions[i] = Math.pow(2, 18 - i);
+    }
+    var tilegrid = new ol.tilegrid.TileGrid({
+        origin: [0, 0],
+        resolutions: resolutions
+    });
+    var map = new ol.Map({
+        layers: [new ol.layer.Tile({
+            source: new ol.source.TileImage({
+                projection: projection,
+                tileGrid: tilegrid,
+                tileUrlFunction: function (tileCoord) {
+                    if (!tileCoord) {
+                        return "";
+                    }
+                    var z = tileCoord[0];
+                    var x = tileCoord[1];
+                    var y = tileCoord[2];
+                    if (x < 0) {
+                        x = "M" + (-x);
+                    }
+                    if (y < 0) {
+                        y = "M" + (-y);
+                    }
+                    return "http://online3.map.bdimg.com/onlinelabel/?qt=tile&x=" + x + "&y=" + y + "&z=" + z + "&styles=pl&udt=20170809&scaler=1&p=1";
+                }
+            })
+        })],
+        // 对应的dom元素
+        target: 'map',
+        view: new ol.View({
+            center: ol.proj.transform([114.324048,30.418837], 'EPSG:4326', 'EPSG:3857'),
+            zoom: 14,
+            maxZoom: 18,
+            projection: 'EPSG:3857'
+        })
+    });
+</script>
+</body>
+</html>
