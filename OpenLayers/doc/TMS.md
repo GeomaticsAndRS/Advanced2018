@@ -2,6 +2,8 @@
 
 TMS是tile map service的缩写，是一种瓦片地图服务，也称之为WMTS（web map tile service），具体的标准可以见OGC网站。TMS的算法很简单，就是把投影后的世界地图按照层级进行四叉树(待验证)切割，切割后的瓦片数量随层级呈金字塔型，数量和层级关系如下表所示：
 
+| 级别| 瓦片数量| 数量|
+| ------------- |:-------------:| -----|
 | 0  |	1 tile covers whole world	            | 1 tile                                |
 | 1  |	2 × 2 tiles	                            | 4 tiles                               |
 | 2  |	4 × 4 tiles	                            | 16 tiles                              |
@@ -34,9 +36,9 @@ TMS是tile map service的缩写，是一种瓦片地图服务，也称之为WMTS
 需要说明的是，Google tile同TMS有差别，原因是：Google tile的直角坐标系原点在左上角（即北极点同中央子午线的交点），而TMS的原点在左下角（南极点同中央子午线的交点）。
 所以：编号索引中的x轴不变，y轴略有变化，结果为该列所有tile减去y再减去1，公式:
 
-    y = 2<sup>z</sup> - y - 1
+   y = 2<sup>z</sup> - y - 1
 
 我们以上海世博演艺中心(现为梅赛德斯奔驰演艺中心)的坐标来演示一下Google tile和TMS的索引差异吧，
 经过计算，在14层级下，Google tile的x和y分别为13721和6696，而TMS的x和y为13721和9687，两者对比如下：
 
-![](images/tms与googletile的区别.png)
+![](../images/tms与googletile的区别.png)
