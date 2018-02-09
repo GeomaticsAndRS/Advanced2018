@@ -33,8 +33,8 @@
     });
 
     // 定义初始视角的位置和方位
-    var initialPosition = Cesium.Cartesian3.fromDegrees(108.95403137246454, 34.214154390264106, 1000); // 目标坐标
-    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(45, -45, 0); // 方位
+    var initialPosition = Cesium.Cartesian3.fromDegrees(108.95403137246454, 34.214154390264106, 100); // 目标坐标
+    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(45, -20, 0); // 方位
 
     // 设置camera的位置
     viewer.scene.camera.setView({
@@ -50,19 +50,18 @@
 
     viewer.scene.primitives.add(tileSet);
 
-    // 当tileSet加载完成后，修改模型的高度，避免飘在空中的现象
     tileSet.readyPromise.then(function (tileset) {
+        // 当tileSet加载完成后，修改模型的高度，避免飘在空中的现象
         changeHeight(tileset, 0);
     });
 
 
-    //方法二，直接调用函数，调整高度,height表示物体离地面的高度
+    //调整高度,height表示物体离地面的高度
     function changeHeight(tileset, height) {
         height = Number(height);
         if (isNaN(height)) {
             return;
         }
-        debugger;
         var cartographic = Cesium.Cartographic.fromCartesian(tileset.boundingSphere.center);
         var surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, cartographic.height);
         var offset = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, height);
