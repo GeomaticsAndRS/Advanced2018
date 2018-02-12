@@ -14,6 +14,9 @@
             padding: 0;
             overflow: hidden;
         }
+        .cesium-viewer-bottom{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -33,8 +36,8 @@
     });
 
     // 定义初始视角的位置和方位
-    var initialPosition = Cesium.Cartesian3.fromDegrees(108.95403137246454, 34.214154390264106, 100); // 目标坐标
-    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(45, -20, 0); // 方位
+    var initialPosition = Cesium.Cartesian3.fromDegrees(114.3609192542298, 30.54071763707404, 5); // 目标坐标
+    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(180, 0, 0); // 方位
 
     // 设置camera的位置
     viewer.scene.camera.setView({
@@ -45,7 +48,7 @@
 
     // 加载3D Tiles 图层
     var tileSet = new Cesium.Cesium3DTileset({
-        url: "http://localhost:8080/3d/dayanta/Tileset.json"
+        url: "http://localhost:8080/3d/wuda2/Tileset.json"
     });
 
     viewer.scene.primitives.add(tileSet);
@@ -87,6 +90,85 @@
     //         console.log('(' + longitudeString + ', ' + latitudeString + ')');
     //     }
     // }, Cesium.ScreenSpaceEventType.LEFT_CLICK); // 左击
+
+
+
+    // 鼠标事件
+
+
+    // Information about the currently selected feature
+    // var selected = {
+    //     feature: undefined,
+    //     originalColor: new Cesium.Color()
+    // };
+    //
+    // // Information about the currently highlighted feature
+    // var highlighted = {
+    //     feature: undefined,
+    //     originalColor: new Cesium.Color()
+    // };
+    //
+    // // Color a feature yellow on hover.
+    // viewer.screenSpaceEventHandler.setInputAction(function onMouseMove(movement) {
+    //     // If a feature was previously highlighted, undo the highlight
+    //     if (Cesium.defined(highlighted.feature)) {
+    //         highlighted.feature.color = highlighted.originalColor;
+    //         highlighted.feature = undefined;
+    //     }
+    //
+    //     // Pick a new feature
+    //     var pickedFeature = viewer.scene.pick(movement.endPosition);
+    //     if (!Cesium.defined(pickedFeature)) {
+    //         return;
+    //     }
+    //
+    //     // Highlight the feature if it's not already selected.
+    //     if (pickedFeature !== selected.feature) {
+    //         highlighted.feature = pickedFeature;
+    //         Cesium.Color.clone(pickedFeature.color, highlighted.originalColor);
+    //         pickedFeature.color = Cesium.Color.YELLOW;
+    //     }
+    // }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+    //
+    // // Color a feature on selection and show metadata in the InfoBox.
+    // viewer.screenSpaceEventHandler.setInputAction(function onLeftClick(movement) {
+    //     // If a feature was previously selected, undo the highlight
+    //     if (Cesium.defined(selected.feature)) {
+    //         selected.feature.color = selected.originalColor;
+    //         selected.feature = undefined;
+    //     }
+    //
+    //     // Pick a new feature
+    //     var pickedFeature = viewer.scene.pick(movement.position);
+    //     if (!Cesium.defined(pickedFeature)) {
+    //         return;
+    //     }
+    //
+    //     // Select the feature if it's not already selected
+    //     if (selected.feature === pickedFeature) {
+    //         return;
+    //     }
+    //     selected.feature = pickedFeature;
+    //
+    //     // Save the selected feature's original color
+    //     if (pickedFeature === highlighted.feature) {
+    //         Cesium.Color.clone(highlighted.originalColor, selected.originalColor);
+    //         highlighted.feature = undefined;
+    //     } else {
+    //         Cesium.Color.clone(pickedFeature.color, selected.originalColor);
+    //     }
+    //
+    //     // Highlight newly selected feature
+    //     pickedFeature.color = Cesium.Color.LIME;
+    //
+    //     // Set feature infobox description
+    //     var propertyNames = pickedFeature.getPropertyNames();
+    //     var length = propertyNames.length;
+    //     for (var i = 0; i < length; ++i) {
+    //         var propertyName = propertyNames[i];
+    //         console.log(propertyName + ': ' + feature.getProperty(propertyName));
+    //     }
+    // }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
 
 </script>
 </body>
