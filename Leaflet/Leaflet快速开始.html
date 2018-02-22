@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Leaflet Quick Start Guide Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
+</head>
+<body>
+<div id="mapid" style="width:600px;height:400px"></div>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script>
+    var popup = L.popup();
+
+    function onMapClick(p) {
+        popup.setLatLng(p.latlng).setContent("You clicked the map at " + p.latlng.toString()).openOn(mymap)
+    }
+
+    var mymap = L.map("mapid").setView([31.505, 113.09], 11);
+    L.tileLayer("http://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}").addTo(mymap);
+    L.marker([31.5, 113.09]).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+    L.circle([31.508, 113.11], 500, {
+        color: "red",
+        fillColor: "#f03",
+        fillOpacity: .5
+    }).addTo(mymap).bindPopup("I am a circle.");
+    L.polygon([[31.509, 113.08], [31.503, 113.06], [31.51, 113.047]]).addTo(mymap).bindPopup("I am a polygon.");
+    mymap.on("click", onMapClick)
+</script>
+</body>
+</html>
