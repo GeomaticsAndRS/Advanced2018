@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>3D Tiles数据加载</title>
-    <link rel="stylesheet" href="http://localhost:8080/libs/Cesium/1.40/Build/Cesium/Widgets/widgets.css">
-    <script type="text/javascript" src="http://localhost:8080/plugin/jquery/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="http://localhost:8080/libs/Cesium/1.40/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="http://10.129.56.22:8080/libs/Cesium/1.40/Build/Cesium/Widgets/widgets.css">
+    <script type="text/javascript" src="http://10.129.56.22:8080/plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="http://10.129.56.22:8080/libs/Cesium/1.40/Build/Cesium/Cesium.js"></script>
     <style>
         html, body, #cesiumContainer {
             width: 100%;
@@ -48,7 +48,7 @@
 
     // 加载3D Tiles 图层
     var tileSet = new Cesium.Cesium3DTileset({
-        url: "http://localhost:8080/3d/wuda2/Tileset.json"
+        url: "http://10.129.56.22:8080/3d/wuda2/Tileset.json"
     });
 
     viewer.scene.primitives.add(tileSet);
