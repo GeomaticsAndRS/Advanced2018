@@ -6,7 +6,7 @@
 <html>
   <body>
     <div>
-        <iframe width="200px" height="200px" frameborder="0" scrolling="no" src="../Leaflet快速开始.html">
+        <iframe width="200px" height="200px" frameborder="0" scrolling="no" src="http://www.marsgis.cn">
         </iframe>
       </div>
    </body>
