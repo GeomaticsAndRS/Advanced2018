@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>加载 GeoServer WMS的实现</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--地图容器-->
+<div id="map" class="map"></div>
+<script>
+    // 创建一个Map对象
+    var map = new ol.Map({
+        // 图层(数据)
+        layers: [
+            // Tile(瓦片类型图层)
+            new ol.layer.Tile({
+                // 瓦片数据源
+                source: new ol.source.TileWMS({
+                    url: "http://localhost:8081/geoserver/whhxts/wms",
+                    params: {
+                        'LAYERS': 'whhxts:Buildings',
+                        'VERSION': '1.1.0',
+                        // 'STYLES': '',
+                        // 'BBOX': '1.273911739259492E7,3560460.873600002,1.273951921448095E7,3560795.7057000054',
+                        // 'WIDTH': '768',
+                        // 'HEIGHT': '639',
+                        'TILED': true
+                    },
+                    serverType: 'geoserver'    //服务器类型
+                })
+            })
+        ],
+        // 对应的dom元素
+        target: 'map',
+        // 视图(渲染)
+        view: new ol.View({
+            // 地图中心点（默认为EPSG:3857坐标系统），需要EPSG:4326经纬度转换
+            // center: ol.proj.fromLonLat([114.311831, 30.584501]),
+            center: [12739342.086456174, 3560629.661587073],
+            zoom: 18
+        })
+    });
+
+    map.on("click", function (e) {
+        console.log(e);
+    })
+</script>
+</body>
+</html>
