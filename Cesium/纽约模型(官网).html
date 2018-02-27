@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Tiles 纽约 数据加载</title>
+    <link rel="stylesheet" href="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Widgets/widgets.css">
+    <script type="text/javascript" src="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Cesium.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: white;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<script>
+
+    // 地图容器
+    var viewer = new Cesium.Viewer('cesiumContainer');
+
+    // 设置初始位置
+    var initialPosition = Cesium.Cartesian3.fromDegrees(-74.01881302800248, 40.69114333714821, 753);
+    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(21.27879878293835, -21.34390550872461, 0.0716951918898415);
+    viewer.scene.camera.setView({
+        destination: initialPosition,
+        orientation: initialOrientation,
+        endTransform: Cesium.Matrix4.IDENTITY
+    });
+
+    // 加载3d tiles 模型
+    viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+        url: 'http://10.129.56.31:8080/3d/NewYork/tileset.json'
+    }));
+
+    // 动态创建的DIV 鼠标移动时试试显示模型的名称
+    var nameOverlay = document.createElement('div');
+    viewer.container.appendChild(nameOverlay);
+    nameOverlay.className = 'backdrop';
+    nameOverlay.style.display = 'none';
+    nameOverlay.style.position = 'absolute';
+    nameOverlay.style.bottom = '0';
+    nameOverlay.style.left = '0';
+    nameOverlay.style['pointer-events'] = 'none';
+    nameOverlay.style.padding = '4px';
+    nameOverlay.style.backgroundColor = 'black';
+
+    // 临时存储选中的模型
+    var selected = {
+        feature: undefined,
+        originalColor: new Cesium.Color()
+    };
+
+    // 临时存储高亮的模型
+    var highlighted = {
+        feature: undefined,
+        originalColor: new Cesium.Color()
+    };
+
+    // infoBox中用到的entity对象
+    var selectedEntity = new Cesium.Entity();
+
+    // 注册鼠标move事件
+    viewer.screenSpaceEventHandler.setInputAction(function onMouseMove(movement) {
+        if (Cesium.defined(highlighted.feature)) {
+            highlighted.feature.color = highlighted.originalColor;
+            highlighted.feature = undefined;
+        }
+
+        // 根据坐标点选择模型
+        var pickedFeature = viewer.scene.pick(movement.endPosition);
+        if (!Cesium.defined(pickedFeature)) {
+            nameOverlay.style.display = 'none';
+            return;
+        }
+
+        // 设置tip的位置
+        nameOverlay.style.display = 'block';
+        nameOverlay.style.bottom = viewer.canvas.clientHeight - movement.endPosition.y + 'px';
+        nameOverlay.style.left = movement.endPosition.x + 'px';
+        var name = pickedFeature.getProperty('name'); // 获取模型属性name的值
+        if (!Cesium.defined(name)) {
+            name = pickedFeature.getProperty('id');
+        }
+        nameOverlay.textContent = name;
+
+        if (pickedFeature !== selected.feature) {
+            highlighted.feature = pickedFeature;
+            Cesium.Color.clone(pickedFeature.color, highlighted.originalColor);
+            pickedFeature.color = Cesium.Color.YELLOW;
+        }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+    // 点击事件
+    var clickHandler = viewer.screenSpaceEventHandler.getInputAction(Cesium.ScreenSpaceEventType.LEFT_CLICK);
+    viewer.screenSpaceEventHandler.setInputAction(function onLeftClick(movement) {
+        if (Cesium.defined(selected.feature)) {
+            selected.feature.color = selected.originalColor;
+            selected.feature = undefined;
+        }
+
+        var pickedFeature = viewer.scene.pick(movement.position);
+        if (!Cesium.defined(pickedFeature)) {
+            clickHandler(movement);
+            return;
+        }
+
+        if (selected.feature === pickedFeature) {
+            return;
+        }
+        selected.feature = pickedFeature;
+
+        if (pickedFeature === highlighted.feature) {
+            Cesium.Color.clone(highlighted.originalColor, selected.originalColor);
+            highlighted.feature = undefined;
+        } else {
+            Cesium.Color.clone(pickedFeature.color, selected.originalColor);
+        }
+
+        pickedFeature.color = Cesium.Color.LIME;
+
+        // 设置并显示infoBox
+        var featureName = pickedFeature.getProperty('name');
+        selectedEntity.name = featureName;
+        selectedEntity.description = 'Loading <div class="cesium-infoBox-loading"></div>';
+        viewer.selectedEntity = selectedEntity;
+        selectedEntity.description = '<table class="cesium-infoBox-defaultTable"><tbody>' +
+            '<tr><th>id</th><td>' + pickedFeature.getProperty('id') + '</td></tr>' +
+            '<tr><th>name</th><td>' + pickedFeature.getProperty('name') + '</td></tr>' +
+            '<tr><th>type</th><td>' + pickedFeature.getProperty('type') + '</td></tr>' +
+            '<tr><th>height</th><td>' + pickedFeature.getProperty('height') + '</td></tr>' +
+            '<tr><th>area</th><td>' + pickedFeature.getProperty('area') + '</td></tr>' +
+            '<tr><th>longitude</th><td>' + pickedFeature.getProperty('longitude') + '</td></tr>' +
+            '<tr><th>latitude</th><td>' + pickedFeature.getProperty('latitude') + '</td></tr>' +
+            '<tr><th>brokenRelation</th><td>' + pickedFeature.getProperty('brokenRelation') + '</td></tr>' +
+            '</tbody></table>';
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Tiles 武大行政楼 数据加载</title>
+    <link rel="stylesheet" href="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Widgets/widgets.css">
+    <script type="text/javascript" src="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Cesium.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: white;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<script>
+
+    // 地图容器
+    var viewer = new Cesium.Viewer('cesiumContainer');
+
+    // 设置初始位置
+    var initialPosition = Cesium.Cartesian3.fromDegrees(114.3609192542298, 30.54071763707404, 100); // 目标坐标
+    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(180, -45, 0); // 方位
+    viewer.scene.camera.setView({
+        destination: initialPosition,
+        orientation: initialOrientation,
+        endTransform: Cesium.Matrix4.IDENTITY
+    });
+
+    // 加载3D Tiles 图层
+    var tileSet = new Cesium.Cesium3DTileset({
+        url: "http://10.129.56.31:8080/3d/wuda2/Tileset.json"
+    });
+
+    viewer.scene.primitives.add(tileSet);
+
+    tileSet.readyPromise.then(function (tileset) {
+        // 当tileSet加载完成后，修改模型的高度，避免飘在空中的现象
+        changeHeight(tileset, 0);
+    });
+
+
+    //调整高度,height表示物体离地面的高度
+    function changeHeight(tileset, height) {
+        height = Number(height);
+        if (isNaN(height)) {
+            return;
+        }
+        var cartographic = Cesium.Cartographic.fromCartesian(tileset.boundingSphere.center);
+        var surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, cartographic.height);
+        var offset = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, height);
+        var translation = Cesium.Cartesian3.subtract(offset, surface, new Cesium.Cartesian3());
+        tileset.modelMatrix = Cesium.Matrix4.fromTranslation(translation);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Tiles数据加载</title>
+    <link rel="stylesheet" href="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Widgets/widgets.css">
+    <script type="text/javascript" src="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Cesium.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<script>
+    var viewer = new Cesium.Viewer("cesiumContainer");
+
+    // 设置初始位置
+    var initialPosition = Cesium.Cartesian3.fromDegrees(0.001, -0.009, 5053);
+    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(0.27879878293835, -45, 0.0716951918898415);
+    viewer.scene.camera.setView({
+        destination: initialPosition,
+        orientation: initialOrientation,
+        endTransform: Cesium.Matrix4.IDENTITY
+    });
+
+    // 加载原生的3d模型
+    viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+        url: 'http://10.129.56.31:8080/3d/output/Tileset.json'
+    }));
+    // 加载精修过后的模型
+    viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+        url: 'http://10.129.56.31:8080/3d/output1/Tileset.json'
+    }));
+
+    // 鼠标事件
+    var selectedEntity = new Cesium.Entity();
+
+    var selected = {
+        feature: undefined,
+        originalColor: new Cesium.Color()
+    };
+
+    var highlighted = {
+        feature: undefined,
+        originalColor: new Cesium.Color()
+    };
+
+    viewer.screenSpaceEventHandler.setInputAction(function onLeftClick(movement) {
+        if (Cesium.defined(selected.feature)) {
+            selected.feature.color = selected.originalColor;
+            selected.feature = undefined;
+        }
+
+        var pickedFeature = viewer.scene.pick(movement.position);
+        if (!Cesium.defined(pickedFeature)) {
+            return;
+        }
+
+        if (selected.feature === pickedFeature) {
+            return;
+        }
+        selected.feature = pickedFeature;
+
+        if (pickedFeature === highlighted.feature) {
+            Cesium.Color.clone(highlighted.originalColor, selected.originalColor);
+            highlighted.feature = undefined;
+        } else {
+            Cesium.Color.clone(pickedFeature.color, selected.originalColor);
+        }
+
+        pickedFeature.color = Cesium.Color.LIME;
+
+        var indexS = pickedFeature._content._url.lastIndexOf("/");
+        var indexE = pickedFeature._content._url.indexOf(".b3dm");
+        var tileName = pickedFeature._content._url.substring(indexS + 1, indexE);
+
+        selectedEntity.name = tileName;
+        viewer.selectedEntity = selectedEntity;
+
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+</script>
+</body>
+</html>
