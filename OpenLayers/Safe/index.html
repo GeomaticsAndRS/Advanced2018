@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>安全生产一张图</title>
+    <link rel="stylesheet" href="http://10.129.56.56:8080/plugin/openlayers/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="css/map.css">
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!-- 地图容器 -->
+<div id="map" class="map"></div>
+<!-- 气泡 -->
+<div id="popup" class="ol-popup">
+    <div id="popup-content">
+        <div id="popup-title"></div>
+        <div id="popup-body"></div>
+    </div>
+</div>
+<!-- 坐标信息 -->
+<div class="com_look">
+    <span><span class="yes">有坐标：33记录</span>&nbsp;<span class="no">无坐标：19记录</span></span>
+</div>
+<!-- 图层 -->
+<div id="layerSwitch">
+    <div class="title"><a>地图图层</a></div>
+    <div class="subtitle">
+        <li>
+            <div><img src="../img/icon_15.png"><span>两化企业</span><input type="checkbox" id="enterprise"></div>
+        </li>
+        <li>
+            <div><img src="../img/icon_14.png"><span>一般隐患（整改中）</span><input type="checkbox" id="general"></div>
+        </li>
+        <li>
+            <div><img src="../img/icon_7.png"><span>重大隐患（整改中）</span><input type="checkbox" id="major"></div>
+        </li>
+    </div>
+</div>
+<script type="text/javascript" src="http://10.129.56.56:8080/plugin/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http://10.129.56.56:8080/plugin/openlayers/build/ol.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/fun.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+    $.get("data/getEntInfoDataList.json", function (data) {
+        initLayer("enterprise", data);
+    });
+    $.get("data/getLatentDangerListData.json", function (data) {
+        initLayer("general", data);
+    });
+    $.get("data/getFearfulDangerListData.json", function (data) {
+        initLayer("major", data);
+    })
+</script>
+</body>
+</html>
