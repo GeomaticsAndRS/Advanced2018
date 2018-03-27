@@ -1,0 +1,241 @@
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#toggleControl {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 410;
+}
+
+#toggleControl .btn {
+    padding: 4px 8px;
+}
+
+.keyInputDiv {
+    position: absolute;
+    left: 60px;
+    top: 15px;
+    width: 235px;
+    z-index: 410;
+}
+
+.ui-autocomplete {
+    z-index: 410;
+}
+
+#layerSwitch {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 410;
+    width: 180px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#layerSwitch .title {
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    background-color: #f1f1f1;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+}
+
+#layerSwitch li {
+    list-style-type: none;
+    height: 36px;
+    padding: 2px 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+#layerSwitch li.active {
+    background-color: #E7E8EA;
+}
+
+#layerSwitch li input {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    float: left;
+    cursor: pointer;
+}
+
+#layerSwitch li .icon {
+    margin-top: 6px;
+    margin-right: 10px;
+    float: left;
+}
+
+#layerSwitch li span {
+    padding-top: 4px;
+    float: left;
+    font-family: SimHei;
+    font-size: 15px;
+}
+
+#layerSwitch li .more {
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#layerSwitch li .normal {
+    background-image: url("../img/normal.png");
+}
+
+#layerSwitch li .expand {
+    background-image: url("../img/expand.png");
+}
+
+.leftMenu {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    width: 180px;
+    height: 219px;
+    padding: 4px;
+    background-color: #E7E8EA;
+    display: none;
+}
+
+.leftMenu li {
+    height: 30px !important;
+}
+
+#houseRentRate {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 410;
+    display: none;
+}
+
+#houseRentRate .table {
+    text-align: center;
+    background-color: white;
+    width: 148px;
+    border: 1px solid #ddd;
+}
+
+#houseRentRate .table th {
+    text-align: center;
+    border: none;
+    font-size: 13px;
+}
+
+#houseRentRate .table td {
+    vertical-align: middle;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#houseRentRate .table div {
+    width: 40px;
+    height: 20px;
+}
+
+.iconDiv {
+    text-align: center;
+    width: 28px;
+    height: 45px;
+    background-size: 28px 45px;
+}
+
+.iconDiv_number {
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 4px;
+}
+
+.importantPopup, .helpPopup {
+    bottom: 38px !important;
+}
+
+.leaflet-control-attribution{
+    display: none!important;
+}
+
+.leaflet-popup-content {
+    width: auto !important;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 0px !important;
+}
+
+.leaflet-div-icon {
+    background: none !important;
+    border: 0px !important;
+}
+
+.worksheet {
+    width: 160px;
+    height: 45px;
+    margin-top: 2px;
+    margin-left: -60px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.workDiv {
+    background-image: url("../img/work.png");
+    width: 48px;
+    height: 48px;
+}
+
+.workDiv .workNum {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.workPop {
+    width: 175px !important;
+    font-size: 18px;
+}
+
+.workPop b {
+    color: red;
+}
+
+.workPopup {
+    bottom: 30px !important;
+}
+
+#mapSwitch {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 410;
+}
+
+#mapSwitch #mapBtn {
+    width: 76px;
+    height: 76px;
+    border: 1px solid #fff;
+    background-image: url("../img/map.png");
+    display: none;
+}
+
+#mapSwitch #sateliteBtn {
+    width: 76px;
+    height: 76px;
+    border: 1px solid #fff;
+    background-image: url("../img/satelite.png");
+}

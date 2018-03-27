@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>三维场景</title>
+    <link rel="stylesheet" href="../plugin/Cesium/Widgets/widgets.css">
+    <link rel="stylesheet" href="../plugin/supermap/pretty.css">
+    <link rel="stylesheet" href="../plugin/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../plugin/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="../plugin/supermap/SuperMap.Include.js"></script>
+    <script type="text/javascript" src="../plugin/jquery/require.min.js" data-main="../plugin/supermap/main"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="fun.js"></script>
+</head>
+
+<body>
+<div id="cesiumContainer"></div>
+<div id='loadingbar' class="spinner">
+    <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container3">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+</div>
+<blockquote id="bubble" class="bubble">
+    <h4 class="title">房屋信息</h4>
+    <table class="table defaultTable">
+    </table>
+</blockquote>
+<div class="place">
+    <p>切换场景：<select class="cesium-button">
+        <option value="a">A区</option>
+        <option value="b" selected="selected">B区</option>
+        <option value="c">C区</option>
+        <option value="police">派出所</option>
+        <option value="office">街道办</option>
+        <option value="phoenix">凤凰社区</option>
+        </select>
+        <!--<button class="cesium-button" onclick="getCamera()">获取相机姿态</button>-->
+    </p>
+</div>
+
+<div class="keyInputDiv">
+    <div class="input-group">
+        <input type="text" id="searchValue" class="form-control" placeholder="请输入搜索关键字"/>
+        <input type="hidden" id="hidValue">
+        <span class="input-group-btn">
+            <button type="button" id="searchBtn" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</div>
+<div class="layersDiv">
+    <div class="title">选择图层</div>
+    <div>
+        <li>
+            <input type="checkbox" id="important">
+            <img class="icon" src="../img/import.png">
+            <span for="importantTag">重点人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="help">
+            <img class="icon" src="../img/help.png">
+            <span>帮扶人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="grid">
+            <img class="icon" src="../img/grid.png">
+            <span>网格边界</span>
+        </li>
+        <li>
+            <input type="checkbox" id="lots" disabled>
+            <img class="icon" src="../img/camera.png">
+            <span>物联网设备</span>
+        </li>
+    </div>
+</div>
+<div class="trend">
+    <div class="title">
+        <span>重点人口动态</span>
+    </div>
+    <div class="body">
+        <marquee onmouseover=this.stop() onmouseout=this.start()></marquee>
+    </div>
+</div>
+<script>
+    // 获取token值并写入当前的cookie中
+    var auth_token = getQueryString("auth-token");
+    if (auth_token != null && auth_token != undefined && auth_token != ""){
+        document.cookie = "auth-token=" + auth_token + ";Path=/";
+    }
+</script>
+</body>
+
+</html>

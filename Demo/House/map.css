@@ -1,0 +1,109 @@
+html, body, #cesiumContainer{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cesium-viewer-navigationContainer{
+    display: none;
+}
+.cesium-widget-credits{
+    display: none !important;
+}
+
+.layersDiv {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: 130px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+
+.layersDiv .title {
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    background-color: #f1f1f1;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+}
+
+.layersDiv li {
+    list-style-type: none;
+    height: 36px;
+    padding: 2px 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+.layersDiv li img {
+    margin: 6px 10px;
+    float: left;
+}
+
+.layersDiv li span {
+    padding-top: 4px;
+    float: left;
+    font-family: SimHei;
+    font-size: 15px;
+}
+
+.layersDiv li input {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-right: 10px;
+    margin-left: 20px;
+    vertical-align: middle;
+    float: left;
+    cursor: pointer;
+}
+
+#houseType {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    z-index: 410;
+}
+
+#houseType .table {
+    width: 150px;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#houseType tr {
+    padding: 5px;
+    height: 30px;
+}
+
+#houseType .table th {
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    border-right: 1px #ddd solid;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+    padding: 2px !important;
+}
+
+#houseType .table td {
+    width: 25%;
+    vertical-align: middle;
+    border: none;
+    padding: 5px !important;
+}
+
+#houseType .table div {
+    height: 12px;
+}
+
+#houseType .left {
+    border-right: 1px solid #ddd;
+}
+
+#houseType .text {
+    font-size: 13px;
+}

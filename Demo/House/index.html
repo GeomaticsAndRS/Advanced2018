@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>房屋管理三维地图</title>
+    <link rel="stylesheet" href="../plugin/Cesium/Widgets/widgets.css">
+    <link rel="stylesheet" href="../plugin/supermap/pretty.css">
+    <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../plugin/supermap/SuperMap.Include.js"></script>
+    <script type="text/javascript" src="../plugin/jquery/require.min.js" data-main="../plugin/supermap/main"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<div class="layersDiv">
+    <div class="title">选择图层</div>
+    <li>
+        <img src="../img/build14.png">
+        <span>宿舍</span>
+        <input type="checkbox" code="01" checked="checked">
+    </li>
+    <li>
+        <img src="../img/build10.png">
+        <span>商铺</span>
+        <input type="checkbox" code="03" checked="checked">
+    </li>
+    <li>
+        <img src="../img/build2.png">
+        <span>办公</span>
+        <input type="checkbox" code="04" checked="checked">
+    </li>
+    <li>
+        <img src="../img/build4.png">
+        <span>仓库</span>
+        <input type="checkbox" code="05" checked="checked">
+    </li>
+    <li>
+        <img src="../img/build5.png">
+        <span>厂房</span>
+        <input type="checkbox" code="06" checked="checked">
+    </li>
+</div>
+<!-- 房屋租赁比例图例 -->
+<div id="houseType">
+    <table class="table">
+        <thead>
+        <tr>
+            <th colspan="4">房屋用途图例</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="color">
+                <div style="background-color: #ffa67a"></div>
+            </td>
+            <td class="text">宿舍</td>
+            <td class="color">
+                <div style="background-color: #2963f7"></div>
+            </td>
+            <td class="text left">商铺</td>
+        </tr>
+        <tr>
+            <td class="color">
+                <div style="background-color: #1fa4b8"></div>
+            </td>
+            <td class="text">办公</td>
+            <td class="color">
+                <div style="background-color: #92f7a3"></div>
+            </td>
+            <td class="text left">仓库</td>
+        </tr>
+        <tr>
+            <td class="color">
+                <div style="background-color: #03a2e5"></div>
+            </td>
+            <td class="text">厂房</td>
+            <td colspan="4"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+</body>
+</html>

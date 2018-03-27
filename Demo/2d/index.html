@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页二维地图</title>
+    <link rel="stylesheet" href="../plugin/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../plugin/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="../plugin/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/proj4.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/proj4leaflet.js"></script>
+    <script type="text/javascript" src="../plugin/esri/esri-leaflet.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+</head>
+<body>
+<div id="toggleControl">
+    <button id="btn_close" type="button" class="btn btn-default" style="background-color: white;">
+        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+    </button>
+    <button id="btn_open" type="button" class="btn btn-default" style="background-color: white; display: none">
+        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+    </button>
+</div>
+<div class="keyInputDiv">
+    <div class="input-group">
+        <input type="text" id="searchValue" class="form-control" placeholder="请输入搜索关键字"/>
+        <span class="input-group-btn">
+                <button type="button" id="searchBtn" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </span>
+    </div>
+</div>
+<div id="mapSwitch">
+    <button id="mapBtn"></button>
+    <button id="sateliteBtn"></button>
+</div>
+<!-- 图层切换 -->
+<div id="layerSwitch">
+    <div>
+        <div class="title">选择图层</div>
+        <div>
+            <li>
+                <input type="checkbox" id="importantTag">
+                <img class="icon" src="../img/icon_4.png">
+                <span for="importantTag">重点人员</span>
+                <a class="more i normal"></a>
+            </li>
+            <li>
+                <input type="checkbox" id="helpTag">
+                <img class="icon" src="../img/icon_5.png">
+                <span>帮扶人员</span>
+                <a class="more h normal"></a>
+            </li>
+            <li>
+                <input type="checkbox" id="pageTag">
+                <img class="icon" src="../img/icon_7.png">
+                <span>待办工单统计</span>
+            </li>
+            <li>
+                <input type="checkbox" id="griderTag">
+                <img class="icon" src="../img/icon_15.png">
+                <span>网格员分布</span>
+            </li>
+            <li>
+                <input type="checkbox" id="letTag">
+                <img class="icon" src="../img/icon_14.png">
+                <span>出租屋分布</span>
+            </li>
+        </div>
+    </div>
+    <div id="important" class="leftMenu">
+        <li>
+            <input type="checkbox" id="emancipist"><img class="icon" src="../img/build13.png"><span>刑满释放人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="correctional" disabled="disabled"><img class="icon" src="../img/build11.png"><span>社区矫正人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="pertition"><img class="icon" src="../img/build8.png"><span>非法上访人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="drug"><img class="icon" src="../img/build12.png"><span>吸毒人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="mental" disabled="disabled"><img class="icon" src="../img/build9.png"><span>精神障碍患者</span>
+        </li>
+        <li>
+            <input type="checkbox" id="aids" disabled="disabled"><img class="icon" src="../img/build1.png"><span>艾滋病危险人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="teenager"><img class="icon" src="../img/build15.png"><span>重点青少年</span>
+        </li>
+    </div>
+    <div id="help" class="leftMenu" style="display: none;">
+        <li>
+            <input type="checkbox" id="suballow"><img class="icon" src="../img/build6.png"><span>低保人员</span>
+        </li>
+        <li>
+            <input type="checkbox" id="disabled"><img class="icon" src="../img/build3.png"><span>残障人士</span>
+        </li>
+        <li>
+            <input type="checkbox" id="livealone"><img class="icon" src="../img/build7.png"><span>独居老人</span>
+        </li>
+    </div>
+</div>
+
+<!-- 房屋租赁比例图例 -->
+<div id="houseRentRate">
+    <table class="table">
+        <thead>
+        <tr><th colspan="2">出租屋比例分布图例</th></tr>
+        </thead>
+        <tbody>
+        <!--<tr><td><div style="background-color: #FF4500"></div></td><td> 70% ~ 100% </td></tr>-->
+        <!--<tr><td><div style="background-color: #FFD700"></div></td><td> 35% ~ 70% </td></tr>-->
+        <!--<tr><td><div style="background-color: #90EE90"></div></td><td> 0% ~ 35% </td></tr>-->
+        <tr><td><div style="background-color: red"></div></td><td> 70% ~ 100% </td></tr>
+        <tr><td><div style="background-color: yellow"></div></td><td> 35% ~ 70% </td></tr>
+        <tr><td><div style="background-color: green"></div></td><td> 0% ~ 35% </td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 地图容器 -->
+<div id="viewDiv">
+
+</div>
+</body>
+</html>

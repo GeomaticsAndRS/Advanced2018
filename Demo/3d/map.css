@@ -1,0 +1,156 @@
+html, body, #sceneDiv, #mapDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#btnToggle {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1000;
+}
+
+#sceneDiv, #mapDiv {
+    position: relative;
+}
+
+.esri-attribution {
+    display: none;
+}
+
+.esri-popup__content {
+    padding-right: 10px;
+}
+
+.esri-layer-list {
+    width: 130px;
+}
+
+.esri-layer-list__item-container {
+    padding: 5px 10px !important;
+}
+.esri-layer-list__item-title {
+    font-size: 13px!important;
+}
+
+.esri-ui-top-right {
+    top: 36px;
+}
+
+.table td {
+    width: auto !important;
+}
+
+.table th {
+    width: auto !important;
+}
+
+.keyInputDiv {
+    position: absolute;
+    left: 60px;
+    top: 15px;
+    width: 235px;
+}
+
+.layersDiv {
+    position: absolute;
+    top: 56px;
+    left: 60px;
+    width: 180px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.layersDiv .title{
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    background-color: #f1f1f1;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+}
+.layersDiv li{
+    list-style-type: none;
+    height: 36px;
+    padding: 2px 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+.layersDiv li input{
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    float: left;
+    cursor: pointer;
+}
+.layersDiv li .icon{
+    margin-top: 6px;
+    margin-right: 10px;
+    float: left;
+}
+.layersDiv li span{
+    padding-top: 4px;
+    float: left;
+    font-family: SimHei;
+    font-size: 15px;
+}
+
+
+.trend {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 46px;
+    width: 100%;
+    background: #0f0f0f;
+    opacity: 0.5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.trend .title {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    color: #de2d0e;
+    font-weight: bold;
+    font-size: 20px;
+    width: 140px;
+}
+
+.trend .body {
+    display: inline;
+    float: left;
+    width: calc(98% - 150px);
+    margin-left: 10px;
+}
+
+.trend marquee {
+    margin-top: -4px;
+}
+
+.trend marquee div.dot {
+    color: #de2d0e;
+    font-size: 30px;
+    display: inline;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+.trend marquee div.text {
+    display: inline;
+}
+
+.defaultTable {
+    margin-bottom: 0px;
+}
+
+.defaultTable th {
+    border-right: none !important;
+}

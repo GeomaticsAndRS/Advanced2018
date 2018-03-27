@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在线高德路径</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../leaflet.css" />
+    <script type="text/javascript" src="../../jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../leaflet.js"></script>
+    <script type="text/javascript" src="../proj4.js"></script>
+    <script type="text/javascript" src="../proj4leaflet.js"></script>
+    <script type="text/javascript" src="../leaflet.ChineseTmsProviders.js"></script>
+
+
+
+    <link rel="stylesheet" href="style/routing.css"/>
+    <script type="text/javascript" src="src/L.ChinaProj.js"></script>
+    <script type="text/javascript" src="src/L.Routing.js"></script>
+    <script type="text/javascript" src="src/L.Request.js"></script>
+    <script type="text/javascript" src="src/L.Routing.Conf.js"></script>
+    <script type="text/javascript" src="src/L.Routing.Reader.js"></script>
+    <script type="text/javascript" src="src/L.Routing.Bywalk.js"></script>
+    <script type="text/javascript" src="src/L.Routing.Bybus.js"></script>
+    <script type="text/javascript" src="src/L.Routing.Bycar.js"></script>
+    <script type="text/javascript" src="src/L.Routing.Query.js"></script>
+	<style>
+		html,
+		body,
+		#viewDiv {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			/*background-color: #00192e;*/
+			cursor: default;
+		}
+	</style>
+</head>
+<body>
+<!-- 地图容器 -->
+<div id="viewDiv">
+</div>
+<script>
+    var map = L.map('viewDiv', {
+        center: [30.59, 114.29],
+        zoom: 10
+    });
+
+    map.on("click", function (e) {
+       console.log(e);
+    });
+
+    L.tileLayer.chinaProvider('GaoDe.Normal.Map',{maxZoom:18,minZoom:5}).addTo(map);
+
+    var route = new L.Routing(map,{
+        transform: "GCJ02",
+        //colorfulLine: true,
+        //isZoom: true
+    });
+    route.getRoute(L.Routing.BYCAR, [30.505927598240696, 114.3999481201172], [30.42010811316847, 114.4474983215332]);
+
+</script>
+</body>
+</html>

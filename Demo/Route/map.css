@@ -1,0 +1,27 @@
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+#mapSwitch{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 410;
+}
+#mapSwitch #mapBtn{
+    width: 76px;
+    height: 76px;
+    border: 1px solid #fff;
+    background-image:url("../img/map.png");
+    display: none;
+}
+#mapSwitch #sateliteBtn{
+    width: 76px;
+    height: 76px;
+    border: 1px solid #fff;
+    background-image:url("../img/satelite.png");
+}

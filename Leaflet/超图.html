@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>超图API学习</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/leaflet/1.0.3/leaflet.css"/>
+    <script type="text/javascript" src="https://cdn.bootcss.com/leaflet/1.0.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://iclient.supermap.io/dist/iclient9-leaflet.js"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script>
+
+    var map, url = "http://localhost:8090/iserver/services/map-FoZuLing/rest/maps/layers";
+    map = L.map('map', {
+        center: [30.44326443351204, 114.43944445432024],
+        zoom: 18
+    });
+    L.supermap.tiledMapLayer(url).addTo(map);
+
+
+    // 图层点击自动查询
+    map.on("click", function (e) {
+        identifyBuilding(e);
+    });
+
+    /**
+     * 点击识别楼栋信息
+     */
+    function identifyBuilding(e) {
+
+        var latlng = e.latlng;
+        var point = L.point(latlng.lat, latlng.lng); // 查询的点对象
+        var param = new SuperMap.QueryByGeometryParameters({
+            queryParams: {name: "Buildings@demo"},
+            geometry: point
+        });
+        L.supermap.queryService("http://localhost:8090/iserver/services/map-FoZuLing/rest/maps/layers").queryByGeometry(param, function (serviceResult) {
+            var result = serviceResult.result;
+            L.geoJSON(result.recordsets[0].features, {
+                stroke: true,
+                color: "red",
+                fill: true,
+                fillColor: "blue"
+            }).addTo(map);
+        });
+
+
+        // L.esri.identifyFeatures({
+        //     url:'https://server.hxct.com/server/rest/services/SafeCommunity/MapServer'
+        // })
+        //     .on(map)
+        //     .at()
+        //     .layers('all:7')
+        //     .run(function(error, featureCollection, response){
+        //         if(error === undefined && featureCollection != undefined && featureCollection.features.length > 0){
+        //             var feature = featureCollection.features[0].properties;
+        //             var buildName = feature.name;
+        //             buildName = buildName.replace(new RegExp('/', 'g'),''); // identify识别出来的是别名
+        //             $.get(baseUrl + "m/frontpage/getGi?name=" + encodeURI(buildName) + "&layerType=BUILDING",function (building) {
+        //                 if (building.buildingId != 0){
+        //                     L.popup().setLatLng(latlng).setContent(
+        //                         "<table style='width: 350px!important;' class='table table-bordered table-striped table-hover'> " +
+        //                         "<tr><td rowspan='9' style='text-align: center;width: 118px;display: none'>" +
+        //                         "<img src='" + checkPicture(building.picUrl) + "' width='100px' height='auto' /></td>" +
+        //                         "<td style='width: 65px;display: none'>楼栋ID</td><td style='display: none;'>" + building.buildingId + "</td></tr>" +
+        //                         "<tr><td>楼栋名称</td><td>" + building.buildingName + "</td></tr>" +
+        //                         "<tr><td>楼栋用途</td><td>" + getBuildingType(building.buildingPurpose) + "</td></tr>" +
+        //                         "<tr><td>商铺数量</td><td>" + building.shops + "</td></tr>" +
+        //                         "<tr><td>自住数量</td><td>" + building.owners + "</td></tr>" +
+        //                         "<tr><td>租户数量</td><td>" + building.tenants + "</td></tr>" +
+        //                         "<tr><td>企业房屋</td><td>" + building.firms + "</td></tr>" +
+        //                         "<tr><td>租住比例</td><td>" + building.usage + "%</td></tr>" +
+        //                         "<tr><td colspan='2'><a href=\"javascript:void(window.open(\'/s/resident/roomInfoxq.html?buildingId=" + building.buildingId + "\', \'_blank\'))\">详情</a></td></tr>" +
+        //                         "</table>")
+        //                         .openOn(map)
+        //                         .on("remove",function () {
+        //                             buildLayer.setFeatureStyle(featureCollection.features[0].id,{
+        //                                 color:'#3388ff'
+        //                             });
+        //                         });
+        //                     buildLayer.setFeatureStyle(featureCollection.features[0].id,{
+        //                         color:'green'
+        //                     });
+        //                     map.panTo(latlng);
+        //                 }
+        //             });
+        //         }
+        //     });
+    }
+
+</script>
+</body>
+</html>

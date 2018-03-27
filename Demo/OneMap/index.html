@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>一张图2d功能集成</title>
+    <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../plugin/leaflet/leaflet.css"/>
+    <link rel="stylesheet" href="css/map.css">
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/proj4.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/leaflet.polylineDecorator.js"></script>
+    <script type="text/javascript" src="../plugin/esri/esri-leaflet.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/fun.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- 搜索框-->
+<div class="searchDiv">
+    <div class="input-group">
+        <div class="input-group-btn">
+            <button id="searchType" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="menuText">调度人员</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0)">调度人员</a></li>
+                <li><a href="javascript:void(0)">居民/房屋</a></li>
+            </ul>
+        </div>
+        <input type="text" id="searchText" class="form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default clearSearch" onclick="removePin()">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+        </span>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" onclick="keySearch()">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </span>
+    </div>
+</div>
+
+<!--内容填充框-->
+<div class="searchContent">
+    <ul>
+    </ul>
+</div>
+
+<!--按钮-->
+<div class="faceRecognition">
+
+    <button type="button" class="btn btn-default" onclick="searchMessage()">
+        <span class="glyphicon glyphicon-user"></span> 人脸搜索
+    </button>
+
+    <button type="button" class="btn btn-default" onclick="callPhone()">
+        <span class="glyphicon glyphicon-phone-alt"></span> 群组对讲
+    </button>
+
+</div>
+<!--地图底图切换-->
+<div id="mapType">
+    <div class="col-md-4 mapTypeCard map active">
+        <span>地图</span>
+    </div>
+    <div class="col-md-4 mapTypeCard satelite">
+        <span>卫星</span>
+    </div>
+</div>
+<!-- 图层切换 -->
+<div id="layerSwitch">
+    <div id="mapDiv" class="title"><a>地图图层</a></div>
+    <div class="subtitle">
+        <li>
+            <div><img src="images/icon/icon_15.png"><span>网格划分</span><input type="checkbox" id="grid"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_14.png"><span>底图</span><input type="checkbox" id="baseMap"
+                                                                          checked="checked"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_2.png"><span>业务图层</span><input type="checkbox" id="bussMap"
+                                                                           checked="checked"></div>
+        </li>
+    </div>
+    <div id="homeDiv" class="title"><a>业务事件</a></div>
+    <div class="subtitle" style="display: none">
+        <li>
+            <div><img src="images/icon/icon_4.png"><span>重点人员</span><input type="checkbox" id="important"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_8.png"><span>摄像头</span><input type="checkbox" id="camera"
+                                                                          checked="checked"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_7.png"><span>告警事件</span><input type="checkbox" id="alarm"></div>
+        </li>
+    </div>
+    <div id="powerDiv" class="title"><a>综治力量</a></div>
+    <div class="subtitle" style="display: none">
+        <li>
+            <div><img src="images/icon/icon_1.png"><span>警察</span><input type="checkbox" id="police"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_3.png"><span>协警</span><input type="checkbox" id="auxiliaryPolice"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_9.png"><span>网格员</span><input type="checkbox" id="gridMan"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_12.png"><span>警车</span><input type="checkbox" id="policeCar"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_11.png"><span>警营亭</span><input type="checkbox" id="policeKiosk"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_6.png"><span>保安</span><input type="checkbox" id="securityStaff"></div>
+        </li>
+        <li>
+            <div><img src="images/icon/icon_5.png"><span>志愿者</span><input type="checkbox" id="volunteer"></div>
+        </li>
+    </div>
+    <div id="specialDiv" class="title"><a>特殊人群</a></div>
+    <div class="subtitle" style="display: none">
+        <li>
+            <div><img src="images/icon/icon_10.png"><span>行径路线</span><input type="checkbox" id="route"></div>
+        </li>
+    </div>
+</div>
+<!-- 地图容器 -->
+<div id="viewDiv">
+</div>
+</body>
+</html>

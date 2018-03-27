@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>超图API学习</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/openlayers/4.2.0/ol.css"/>
+    <script type="text/javascript" src="http://server.hxct.com:8080/plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/openlayers/4.2.0/ol.js"></script>
+    <script type="text/javascript" src="http://iclient.supermap.io/dist/iclient9-openlayers.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .ol-popup {
+            position: absolute;
+            background-color: white;
+            -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            bottom: 12px;
+            left: -50px;
+            min-width: 300px;
+        }
+
+        .ol-popup:after, .ol-popup:before {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .ol-popup:after {
+            border-top-color: white;
+            border-width: 10px;
+            left: 48px;
+            margin-left: -10px;
+        }
+
+        .ol-popup:before {
+            border-top-color: #cccccc;
+            border-width: 11px;
+            left: 48px;
+            margin-left: -11px;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<div id="popup" class="ol-popup">
+    <div id="popup-content"></div>
+</div>
+<script>
+
+    // 弹框气泡对象
+    var container = document.getElementById('popup');
+    var content = document.getElementById('popup-content');
+    var overlay = new ol.Overlay(({
+        element: container,
+        autoPan: true,
+        autoPanAnimation: {
+            duration: 250
+        }
+    }));
+
+    var map = new ol.Map({
+        target: 'map',
+        layers: [
+            // 加载影像地图
+            new ol.layer.Tile({
+                // 瓦片数据源
+                source: new ol.source.XYZ({
+                    url: "http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}"
+                })
+            }),
+            // 加载佛祖岭要素图层
+            new ol.layer.Tile({
+                source: new ol.source.TileSuperMapRest({
+                    url: "http://localhost:8090/iserver/services/map-FoZuLing/rest/maps/layers",
+                    transparent: true //开启背景透明
+                }),
+            })
+        ],
+        // 视图(渲染)
+        view: new ol.View({
+            // 地图中心点（默认为EPSG:3857坐标系统），需要EPSG:4326经纬度转换
+            center: ol.proj.fromLonLat([114.43944445432024, 30.44326443351204]),
+            zoom: 18
+        })
+    });
+
+    query();
+
+    function query() {
+        var sqlParam = new SuperMap.GetFeaturesBySQLParameters({
+            queryParameter: {
+                name: "Buildings@demo",
+                attributeFilter: "buildno = '10栋'"
+            },
+            datasetNames: ["demo:Buildings"]
+        });
+        new ol.supermap.FeatureService("http://localhost:8090/iserver/services/data-FoZuLing/rest/data").getFeaturesBySQL(sqlParam, function (serviceResult) {
+            var vectorSource = new ol.source.Vector({
+                features: (new ol.format.GeoJSON()).readFeatures(serviceResult.result.features),
+                wrapX: false
+            });
+            var resultLayer = new ol.layer.Vector({
+                source: vectorSource,
+                style: new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(0, 0, 255, 0.6)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: 'magenta',
+                        width: 2
+                    })
+                })
+            });
+            map.addLayer(resultLayer);
+        });
+    }
+
+    function query1() {
+        var geoParam = new SuperMap.QueryByGeometryParameters({});
+    }
+
+    //
+
+    // 图层点击自动查询
+    map.on("click", function (e) {
+        identifyBuilding(e);
+    });
+
+    /**
+     * 点击识别楼栋信息
+     */
+    function identifyBuilding(e) {
+        // 根据点击的坐标封装point对象
+        var point = new ol.geom.Point(e.coordinate);
+        var param = new SuperMap.QueryByGeometryParameters({
+            queryParams: {name: "Buildings@demo"}, // 设置图层
+            geometry: point
+        });
+        new ol.supermap.QueryService("http://localhost:8090/iserver/services/map-FoZuLing/rest/maps/layers").queryByGeometry(param, function (serviceResult) {
+            var vectorSource = new ol.source.Vector({
+                features: (new ol.format.GeoJSON()).readFeatures(serviceResult.result.recordsets[0].features),
+                wrapX: false
+            });
+            var resultLayer = new ol.layer.Vector({
+                source: vectorSource,
+                style: new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(0, 0, 255, 0.6)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: 'magenta',
+                        width: 2
+                    })
+                })
+            });
+            // 添加这个要素
+            map.addLayer(resultLayer);
+
+            // 添加查询到的信息
+            var feature = serviceResult.result.recordsets[0].features.features[0].properties;
+            var buildName = feature.NAME;
+            buildName = buildName.replace(new RegExp('/', 'g'), ''); // identify识别出来的是别名
+            $.get(baseUrl + "m/frontpage/getGi?name=" + encodeURI(buildName) + "&layerType=BUILDING", function (building) {
+                if (building.buildingId != 0) {
+                    // 添加气泡
+                    var innerHTML = buildName + "<br><br>";
+                    innerHTML += "楼栋名称：" + building.buildingName + "<br>";
+                    innerHTML += "楼栋用途:" + getBuildingType(building.buildingPurpose) + "<br>";
+                    innerHTML += "商铺数量:" + building.shops + "<br>";
+                    innerHTML += "自住数量:" + building.owners + "<br>";
+                    innerHTML += "租户数量:" + building.tenants + "<br>";
+                    innerHTML += "企业房屋:" + building.firms + "<br>";
+                    innerHTML += "租住比例:" + building.usage + "<br>";
+                    innerHTML += "详情:" + building.usage + "<a href=\"javascript:void(window.open(\'/s/resident/roomInfoxq.html?buildingId=" + building.buildingId + "\', \'_blank\'))\">详情</a>";
+                    content.innerHTML = innerHTML;
+                    overlay.setPosition(point.getCoordinates());
+                    map.panTo(latlng);
+                }
+            });
+        });
+    }
+
+</script>
+</body>
+</html>

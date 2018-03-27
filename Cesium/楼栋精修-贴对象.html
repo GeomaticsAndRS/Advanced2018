@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贴对象</title>
+    <link rel="stylesheet" href="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Widgets/widgets.css">
+    <script type="text/javascript" src="http://10.129.56.31:8080/libs/Cesium/1.40/Build/Cesium/Cesium.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<script>
+    var viewer = new Cesium.Viewer("cesiumContainer");
+
+    // 设置初始位置
+    var initialPosition = Cesium.Cartesian3.fromDegrees(0.001, -0.009, 5053);
+    var initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(0.27879878293835, -45, 0.0716951918898415);
+    viewer.scene.camera.setView({
+        destination: initialPosition,
+        orientation: initialOrientation,
+        endTransform: Cesium.Matrix4.IDENTITY
+    });
+
+    // 加载原生的3d模型
+    var tileSet = new Cesium.Cesium3DTileset({
+        url: 'http://10.129.56.31:8080/3d/output/Tileset.json'
+    });
+    viewer.scene.primitives.add(tileSet);
+    // 加载精修过后的模型
+    var tileSet1 = new Cesium.Cesium3DTileset({
+        url: 'http://10.129.56.31:8080/3d/output1/Tileset.json'
+    });
+    viewer.scene.primitives.add(tileSet1);
+
+
+    tileSet.readyPromise.then(function (tileset) {
+        // 当tileSet加载完成后，修改模型的高度，避免飘在空中的现象
+        changeHeight(tileset, 0);
+    });
+    tileSet1.readyPromise.then(function (tileset) {
+        // 当tileSet加载完成后，修改模型的高度，避免飘在空中的现象
+        changeHeight(tileset, 0);
+    });
+
+
+    //调整高度,height表示物体离地面的高度
+    function changeHeight(tileset, height) {
+        height = Number(height);
+        if (isNaN(height)) {
+            return;
+        }
+        var cartographic = Cesium.Cartographic.fromCartesian(tileset.boundingSphere.center);
+        var surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, cartographic.height);
+        var offset = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, height);
+        var translation = Cesium.Cartesian3.subtract(offset, surface, new Cesium.Cartesian3());
+        tileset.modelMatrix = Cesium.Matrix4.fromTranslation(translation);
+    }
+
+    //得到当前三维场景
+    var scene = viewer.scene;
+    //得到当前三维场景的椭球体
+    var ellipsoid = scene.globe.ellipsoid;
+
+    // 注册屏幕空间事件
+    viewer.screenSpaceEventHandler.setInputAction(function (clickEvent) {
+
+        //通过指定的椭球或者地图对应的坐标系，将鼠标的二维坐标转换为对应椭球体三维坐标
+        var cartesian = viewer.camera.pickEllipsoid(clickEvent.position, ellipsoid);
+        if (cartesian) {
+            //将笛卡尔坐标转换为地理坐标
+            var cartographic = ellipsoid.cartesianToCartographic(cartesian);
+            //将弧度转为度的十进制度表示
+            var longitudeString = Cesium.Math.toDegrees(cartographic.longitude);
+            var latitudeString = Cesium.Math.toDegrees(cartographic.latitude);
+
+            console.log(longitudeString + ',' + latitudeString);
+        }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK); // 左击
+
+    var redRectangle = viewer.entities.add({
+        name : 'Red translucent rectangle',
+        rectangle : {
+            coordinates : Cesium.Rectangle.fromDegrees(0.00000817676074360818,-0.00105793962802112164, 0.00100817676074360818,-0.00005793962802112164),
+            material : Cesium.Color.RED.withAlpha(0.5),
+            rotation : Cesium.Math.toRadians(45),
+            extrudedHeight : 100.0,
+            height : 10.0
+        }
+    });
+    viewer.zoomTo(redRectangle);
+
+    // 0.00000817676074360818,-0.00005793962802112164
+
+</script>
+</body>
+</html>

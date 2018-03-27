@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>绘制网格单元</title>
+    <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../plugin/arcgis/esri/css/main.css">
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/vue/vue2.2.1.js"></script>
+    <script type="text/javascript" src="../plugin/arcgis/init.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="select.js"></script>
+</head>
+
+<body>
+
+<div id="app">
+    <div id="contRight">
+        <div class="personnelCont">
+            <h3>网格配置</h3>
+            <div class="personnerlTop">
+                <label style="float: left;">选择网格：</label>
+                <select class="form-control" v-model="street" @change="selectStreet(street)">
+                    <option value="">--请选择街道--</option>
+                    <option v-for="item in streetList" :value="item">{{item}}</option>
+                </select>
+                <select class="form-control" v-model="community" @change="selectCommunity(community)">
+                    <option value="">--请选择社区--</option>
+                    <option v-for="item in communityList" :value="item">{{item}}</option>
+                </select>
+                <select class="form-control" v-model="gridId" id="selectGrid">
+                    <option value="">-请选择网格-</option>
+                    <option v-for="item in gridList" :value="item.gridId">{{item.gridName}}</option>
+                </select>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="viewDiv">
+        <div class="tip">
+            单击以开始绘制
+        </div>
+        <div class="toolbar">
+            <div class="btn-group">
+                <button class="btn btn-default" id="btn_draw_start">开始绘制</button>
+                <button class="btn btn-default disabled" id="btn_draw_end">结束绘制</button>
+                <button class="btn btn-default btn-primary disabled" id="btn_clear">清除</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

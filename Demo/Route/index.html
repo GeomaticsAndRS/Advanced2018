@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>路径显示</title>
+    <link rel="stylesheet" href="../plugin/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/proj4.js"></script>
+    <script type="text/javascript" src="../plugin/esri/esri-leaflet.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/leaflet.polylineDecorator.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+</head>
+<body>
+
+<!-- 底图切换 -->
+<div id="mapSwitch">
+    <button id="mapBtn"></button>
+    <button id="sateliteBtn"></button>
+</div>
+
+<!-- 地图容器 -->
+<div id="viewDiv"></div>
+
+<script>
+    /**
+     * 显示人员行踪
+     * @param locations 数据示例：[{time:"2018-01-01 12:00:00", location:"佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+     *                           {time:"2018-01-01 13:00:00", location:"佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"}...]
+     */
+    function showRoute(locations) {
+        showPersonRoute(locations);
+    }
+
+    // setTimeout(function () {
+    //     var locations = [
+    //         {time: "2018-01-12 13:53:25", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-12 13:51:22", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-12 13:50:57", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-12 11:16:02", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-12 11:14:08", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"} ,
+    //         {time: "2018-01-12 10:20:53", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-12 10:18:44", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-12 08:56:57", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-12 08:55:01", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-11 11:54:47", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-11 11:43:49", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-11 11:41:08", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-11 10:55:34", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-11 10:53:40", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-11 10:25:32", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-11 09:47:17", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-11 09:45:49", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-11 08:14:51", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-11 08:11:49", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-11 08:09:35", location: "佛祖岭B区西大门/人脸识别摄像头/RLSB-08"} ,
+    //         {time: "2018-01-10 16:48:16", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-10 16:13:58", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-10 16:12:22", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-10 15:51:28", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-10 15:49:51", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-10 15:32:29", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-10 15:30:41", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-10 14:20:39", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-10 14:18:54", location: "佛祖岭B区17栋附近/人脸识别摄像头/RLSB-03"},
+    //         {time: "2018-01-10 09:55:34", location: "佛祖岭B区南大门/人行道闸/RXDZ-01"},
+    //         {time: "2018-01-10 09:55:34", location: "佛祖岭B区南大门/人行道闸/RXDZ-01"},
+    //         {time: "2018-01-09 15:41:12", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-09 15:35:29", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2018-01-09 14:21:48", location: "佛祖岭B区政务服务中心/人脸识别摄像头/RLSB-07"},
+    //         {time: "2017-01-11 10:55:34", location: "佛祖岭B区36栋1单元/门禁/MJ-01"},
+    //         {time: "2017-01-11 09:55:34", location: "佛祖岭B区南大门/人行道闸/RXDZ-01"}
+    //     ];
+    //     showRoute(locations);
+    // },1000);
+
+</script>
+</body>
+</html>
