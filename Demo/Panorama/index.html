@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二维全景GIS</title>
+    <link rel="stylesheet" href="../plugin/leaflet/leaflet.css"/>
+    <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../plugin/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../plugin/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="swfobject.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #map, #flashContent {
+            height: 100%;
+            width: 100%;
+        }
+        #map{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+        }
+        .popA{
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .popA:hover{
+            text-decoration: none;
+        }
+        .tree{
+            display: inline-block;
+            position: absolute;
+            top: 90px;
+            left: 10px;
+            z-index: 9999;
+            min-height: 20px;
+            background: rgba(1,1,1,0.6);
+            color: #fff;
+            padding: 10px;
+        }
+        .tree ul{
+            margin: 0;
+        }
+        .tree a{
+            color: #fff;
+        }
+        .tree a:hover{
+            color: #0a36e9;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 设置高度
+            var height = $(window).height();
+            $("div.row").height(height / 2);
+
+            // 初始化地图
+            map = L.map('map', {
+                center: [30.44326443351204, 114.43944445432024],
+                zoom: 18
+            });
+            baseLayer = L.tileLayer('http://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}').addTo(map);
+
+            // 初始化点
+            var points = [
+                {name: "佛祖岭办事处门口", file: "jiedaobandimian", lon: "114.45196688175203", lat: "30.4578807754388"},
+                {name: "同心派出所门口", file: "paichusuodimian1", lon: "114.45117831230165", lat: "30.436760043209567"},
+                {name: "同心派出所院内", file: "paichusuodimian2", lon: "114.45114076137544", lat: "30.436931173287398"},
+                {name: "同心派出所", file: "paichusuokongzhong", lon: "114.45122659206392", lat: "30.436843295717363"},
+                {name: "佛祖岭社区", file: "shequkongzhong", lon: "114.44488048553468", lat: "30.440635834588953"}
+            ];
+            points.forEach(function (point) {
+                L.marker([point.lat, point.lon])
+                    .bindPopup("<h3>" + point.name + "</h3>" +
+                        "<a class='popA' lon='" + point.lon + "' lat='" + point.lat + "' code='" + point.file + "' onclick='enterPoint(this)'>进入全景</a>")
+                    .addTo(map);
+                $(".treeContent").append("<li>" +
+                    "<span><i class=\"icon-minus-sign\"></i><a class='popA' lon='" + point.lon + "' lat='" + point.lat + "' code='" + point.file + "' onclick='enterPoint(this)'>" + point.name + "</a></span>\n" +
+                    "</li>")
+            });
+
+            map.panTo([points[0].lat, points[0].lon]);
+
+            // 初始化全景
+            loadSWF("jiedaobandimian");
+        });
+
+        // 切换全景场景
+        function enterPoint(obj) {
+            var file = $(obj).attr("code");
+            var lat = $(obj).attr("lat");
+            var lon = $(obj).attr("lon");
+            map.flyTo([lat,lon]);
+            swfobject.removeSWF("pano"); // 摧毁掉之前的object
+            $(".row").eq(0).append("<div id=\"flashContent\"></div>"); // 重新构建dom
+            loadSWF(file);
+        }
+
+        // 加载文件
+        function loadSWF(filename) {
+            var flashvars = {};
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "#ffffff";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "pano";
+            attributes.name = "pano";
+            attributes.align = "middle";
+            swfobject.embedSWF(filename + ".swf", "flashContent", "100%", "100%", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div id="flashContent">
+            <p><a href="http://www.adobe.com/go/getflashplayer">
+                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                     alt="Get Adobe Flash player"/></a></p>
+        </div>
+    </div>
+    <div class="row" style="position: relative">
+        <div class="tree">
+            <ul>
+                <li>
+                    <span><i class="icon-folder-open"></i>全景热点</span>
+                    <ul class="treeContent">
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
+</body>
+</html>
