@@ -29,9 +29,22 @@
         layers: [
             // Tile(瓦片类型图层)
             new ol.layer.Tile({
-                // 瓦片数据源
-                source: new ol.source.TileArcGISRest({
-                    url: "http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer"
+                // 在线瓦片数据源
+                // source: new ol.source.TileArcGISRest({
+                //     url: "http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer"
+                // })
+                // 离线瓦片数据源
+                source : new ol.source.XYZ({
+                    tileUrlFunction:function (tilePoint) {
+                            var oo = "00000000";
+                            var xx = tilePoint[1].toString(16);
+                            xx = "C" + oo.substring(0, 8 - xx.length) + xx;
+                            var yy = (-tilePoint[2]).toString(16);
+                            yy = "R" + oo.substring(0, 8 - yy.length) + yy;
+                            var zz = "L" + tilePoint[0];
+                            return "http://10.129.56.56:8080/map/武汉市ArcGISServer瓦片/_alllayers/" +
+                                zz.toUpperCase() + "/" + yy.toUpperCase() + "/" + xx.toUpperCase() + ".png"
+                    }
                 })
             })
         ],
