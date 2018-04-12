@@ -8,6 +8,7 @@
     <title>加载离线瓦片地图加载</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
     <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+    <script type="text/javascript" src="http://10.129.56.56:8090/iserver/iClient/forJavaScript/dist/iclient9-openlayers.js"></script>
     <style>
         html, body, #map {
             width: 100%;
@@ -37,34 +38,41 @@
             new ol.layer.Group({
                 layers: [
                     // 谷歌TMS
-                    new ol.layer.Tile({
-                        source: new ol.source.XYZ({
-                            tileUrlFunction: function (tileCoord) {
-                                var z = tileCoord[0];
-                                var x = tileCoord[1];
-                                var y = - tileCoord[2];
-                                return "http://localhost:8080/map/谷歌TMS/" + z + "/" + x + "/" + y + ".png";
-                            }
-                        })
-                    })
-                    // 标准TMS
                     // new ol.layer.Tile({
                     //     source: new ol.source.XYZ({
                     //         tileUrlFunction: function (tileCoord) {
                     //             var z = tileCoord[0];
                     //             var x = tileCoord[1];
-                    //             y = Math.pow(2, z) + tileCoord[2] - 1;
-                    //             return "http://localhost:8080/map/标准TMS/" + z + "/" + x + "/" + y + ".png";
+                    //             var y = - tileCoord[2];
+                    //             return "http://localhost:8080/map/谷歌TMS/" + z + "/" + x + "/" + y + ".png";
                     //         }
                     //     })
                     // })
+                    // 标准TMS
+                    new ol.layer.Tile({
+                        source: new ol.source.XYZ({
+                            tileUrlFunction: function (tileCoord) {
+                                var z = tileCoord[0];
+                                var x = tileCoord[1];
+                                // y = Math.pow(2, z) + tileCoord[2] -1;
+                                y = Math.pow(2, z) + tileCoord[2]; //如果有偏移，则不-1
+                                return "http://10.129.56.56:8080/map/武汉市标准TMS瓦片/" + z + "/" + x + "/" + y + ".png";
+                            }
+                        })
+                    }),
+                    new ol.layer.Tile({
+                        source: new ol.source.TileSuperMapRest({
+                            url: "http://10.129.56.56:8090/iserver/services/map-PeaceComm/rest/maps/综治平台",
+                            transparent:true
+                        })
+                    })
                 ]
             })
         ],
         target: 'map',
         view: new ol.View({
-            center: ol.proj.fromLonLat([114.311831, 30.584501]),
-            zoom: 9
+            center: ol.proj.fromLonLat([114.43944445432024, 30.44326443351204]),
+            zoom: 18
         })
     });
 

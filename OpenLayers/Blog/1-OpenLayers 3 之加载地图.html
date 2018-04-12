@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenLayers 3 之加载地图</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
+    <style>
+        html, body, .map {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="map" class="map"></div>
+<script type="text/javascript">
+    var map = new ol.Map({
+        target: 'map', // 容器ID
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            }) // 图层集合
+        ],
+        view: new ol.View({ // 视图
+            center: ol.proj.fromLonLat([114.41, 30.82]),
+            zoom: 8
+        })
+    });
+</script>
+</body>
+</html>

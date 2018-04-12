@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenLayers 3 之 使用矢量图层（Vector）</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        html, body, .map {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ol-popup {
+            position: absolute;
+            background-color: white;
+            -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            bottom: 12px;
+            left: -50px;
+        }
+
+        .ol-popup:after, .ol-popup:before {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .ol-popup:after {
+            border-top-color: white;
+            border-width: 10px;
+            left: 48px;
+            margin-left: -10px;
+        }
+
+        .ol-popup:before {
+            border-top-color: #cccccc;
+            border-width: 11px;
+            left: 48px;
+            margin-left: -11px;
+        }
+
+        .ol-popup-closer {
+            text-decoration: none;
+            position: absolute;
+            top: 2px;
+            right: 8px;
+        }
+
+        .ol-popup-closer:after {
+            content: "✖";
+        }
+    </style>
+</head>
+<body>
+<!--overlay-->
+<div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content" style="width:300px; height:120px;"></div>
+</div>
+<div id="map" class="map"></div>
+<script type="text/javascript">
+
+    var highlightedStyle = new ol.style.Style({
+        fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+            color: 'rgba(117, 117, 117, 0.6)'
+        }),
+        stroke: new ol.style.Stroke({ //边界样式
+            color: '#319FD3',
+            width: 1
+        }),
+        text: new ol.style.Text({ //文本样式
+            font: '14px Calibri,sans-serif',
+            fill: new ol.style.Fill({
+                color: '#000'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#fff',
+                width: 3
+            })
+        })
+    });
+
+    // 高亮图层
+    var highlightedLayer = new ol.layer.Vector({
+        source: new ol.source.Vector(),
+        style:highlightedStyle
+    });
+
+    var map = new ol.Map({
+        target: 'map', // 容器ID
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            }), // 图层集合
+            highlightedLayer
+        ],
+        view: new ol.View({ // 视图
+            center: ol.proj.fromLonLat([114.41, 30.82]),
+            zoom: 8
+        })
+    });
+
+    // overlay容器
+    var container = document.getElementById('popup');
+    // overlay中body部分
+    var content = document.getElementById('popup-content');
+    // overlay中关闭按钮
+    var closer = document.getElementById('popup-closer');
+
+    // 初始化overlay
+    var overlay = new ol.Overlay({
+        element: container,
+        autoPan: true,
+        autoPanAnimation: {
+            duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度. 单位为毫秒（ms）
+        }
+    });
+
+    // 定义关闭按钮事件
+    closer.onclick = function (ev) {
+        overlay.setPosition(undefined); // 取消定位
+        closer.blur(); // 失去焦点
+        return false; // 防止事件继续冒泡
+    };
+
+    // 添加点击事件
+    map.addEventListener("click", function (event) {
+        var coordinate = event.coordinate; //3857
+        var lnglat = ol.proj.transform(coordinate, "EPSG:3857", "EPSG:4326"); // 3857 -> 4326
+        var hdms = ol.coordinate.toStringHDMS(lnglat); // 度分秒
+        content.innerHTML = '<p>你点击的坐标是：</p><code>' + hdms + '</code>'; // 显示具体的内容
+        overlay.setPosition(coordinate); // 设置overlay显示的位置**坐标是3857
+        map.addOverlay(overlay);
+    });
+
+    // 添加移动事件
+    map.addEventListener("pointermove",function (event) {
+        if (event.dragging) {   //如果是拖动地图造成的鼠标移动，则不作处理
+            return;
+        }
+        var pixel = map.getEventPixel(event.originalEvent);
+        var feature = map.forEachFeatureAtPixel(pixel, function(feature, layer) {
+            return feature; // 搜索feature
+        });
+
+        if (feature) {
+            highlightedLayer.getSource().clear(); // 先清空
+            highlightedLayer.getSource().addFeature(feature); //再添加
+        }
+    });
+
+    // 自定义vertor显示样式
+    var style = new ol.style.Style({
+        fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+            color: 'rgba(117, 117, 117, 0.6)'
+        }),
+        stroke: new ol.style.Stroke({ //边界样式
+            color: '#319FD3',
+            width: 1
+        }),
+        text: new ol.style.Text({ //文本样式
+            font: '14px Calibri,sans-serif',
+            fill: new ol.style.Fill({
+                color: '#000'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#fff',
+                width: 3
+            })
+        })
+    });
+
+    // 创建矢量图层
+    var vertorLayer = new ol.layer.Vector({
+        // 加载geojson数据
+        source: new ol.source.Vector({
+            //features: features // 如果是features的方式
+            // 如果是geojson的方式
+            format: new ol.format.GeoJSON({
+                defaultDataProjection: 'EPSG:4326',// 设定JSON数据使用的坐标系
+                featureProjection: 'EPSG:3857' // 设定当前地图使用的feature的坐标系
+            }),
+            url:"data/geojson/countries.json"
+        }),
+        style: function(feature, resolution) {
+            style.getText().setText(resolution < 5000 ? feature.get('name') : '');  //当放大到1:5000分辨率时，显示国家名字
+            return style;
+        }
+    });
+    map.addLayer(vertorLayer);
+
+
+    // 异步获取geojson数据
+    // $.get("data/geojson/countries.json", function (data) {
+    //     var features = new ol.format.GeoJSON().readFeatures(data, {
+    //         dataProjection: 'EPSG:4326',    // 设定JSON数据使用的坐标系
+    //         featureProjection: 'EPSG:3857' // 设定当前地图使用的feature的坐标系
+    //     }); // 读取geojson格式数据 转换为 vertor需要的feature
+    //
+    //     // 创建矢量图层
+    //     var vertorLayer = new ol.layer.Vector({
+    //         source: new ol.source.Vector({
+    //             features: features
+    //         }),
+    //         style: function(feature, resolution) {
+    //             style.getText().setText(resolution < 5000 ? feature.get('name') : '');  //当放大到1:5000分辨率时，显示国家名字
+    //             return style;
+    //         }
+    //     });
+    //     map.addLayer(vertorLayer);
+    // });
+
+
+</script>
+</body>
+</html>
