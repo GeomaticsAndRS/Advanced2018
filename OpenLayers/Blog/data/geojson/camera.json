@@ -1,0 +1,3685 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4402410560764,
+          30.44320155923585
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-401",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#046fae",
+        "name": "研判大厅西北角",
+        "lon": "1.14440241056e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-401",
+        "lat": "3.04432015592e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44030047600832,
+          30.44308783341575
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-402",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#de977a",
+        "name": "研判大厅入口处",
+        "lon": "1.14440300476e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-402",
+        "lat": "3.04430878334e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44031830198789,
+          30.443086808858236
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-403",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#4c2c1d",
+        "name": "大厅西南角",
+        "lon": "1.14440318302e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-403",
+        "lat": "3.04430868089e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4404121854803,
+          30.4430888579733
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-404",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#4c6126",
+        "name": "大门口(人员聚焦)",
+        "lon": "1.14440412185e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-404",
+        "lat": "3.04430888580e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4404062434871,
+          30.443111398236233
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-40",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#6377a6",
+        "name": "大厅入口(人脸识别)",
+        "lon": "1.14440406243e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区社区综治中心/人脸识别摄像头/RLSB-40",
+        "lat": "3.04431113982e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44039792469664,
+          30.443130864822727
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-405",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#b8c538",
+        "name": "前台在外",
+        "lon": "1.14440397925e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-405",
+        "lat": "3.04431308648e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44035633074431,
+          30.443183117219984
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-406",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#cc5adb",
+        "name": "前台内",
+        "lon": "1.14440356331e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-406",
+        "lat": "3.04431831172e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4403812871157,
+          30.443236394145174
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-407",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#427c0e",
+        "name": "卫生间",
+        "lon": "1.14440381287e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-407",
+        "lat": "3.04432363941e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44041456227758,
+          30.443173896210723
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-408",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#efa587",
+        "name": "会议室门口",
+        "lon": "1.14440414562e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-408",
+        "lat": "3.04431738962e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44043951864896,
+          30.443091931645835
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-409",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#16aaa2",
+        "name": "调解室门口",
+        "lon": "1.14440439519e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区社区综治中心/视频监控摄像头/SPJK-409",
+        "lat": "3.04430919316e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44044075546736,
+          30.443101160967313
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-41",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#5fa112",
+        "name": "调解室门口(人脸识别)",
+        "lon": "1.14440440755e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区社区综治中心/人脸识别摄像头/RLSB-41",
+        "lat": "3.04431011610e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44041461069733,
+          30.44313650819102
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-21",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#07002b",
+        "name": "矛盾调解西北角",
+        "lon": "1.14440414611e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭B区社区综治中心/录音录像摄像头/LYLX-21",
+        "lat": "3.04431365082e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44045679884897,
+          30.44311909072009
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-22",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#9a28cf",
+        "name": "矛盾调解东南角",
+        "lon": "1.14440456799e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭B区社区综治中心/录音录像摄像头/LYLX-22",
+        "lat": "3.04431190907e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44049126240947,
+          30.443121139834474
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-23",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#f06c07",
+        "name": "信访办东南角",
+        "lon": "1.14440491262e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭B区社区综治中心/录音录像摄像头/LYLX-23",
+        "lat": "3.04431211398e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4404455090619,
+          30.443145729203756
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-24",
+        "address": "佛祖岭B区社区综治中心",
+        "color": "#6012ec",
+        "name": "信访办西北角",
+        "lon": "1.14440445509e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭B区社区综治中心/录音录像摄像头/LYLX-24",
+        "lat": "3.04431457292e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44657908696767,
+          30.46030055837261
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-09",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#065877",
+        "name": "信访接待室西南角",
+        "lon": "1.14446579087e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-09",
+        "lat": "3.04603005584e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44662543451454,
+          30.460310802140718
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-04",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#2fd1b5",
+        "name": "小会议室东北角",
+        "lon": "1.14446625435e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-04",
+        "lat": "3.04603108021e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44652156847359,
+          30.460357103946926
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-03",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#c5eade",
+        "name": "小会议室西南角",
+        "lon": "1.14446521568e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-03",
+        "lat": "3.04603571039e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44655460595573,
+          30.460232949496575
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-08",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#3d4b8a",
+        "name": "街坊接待室东北",
+        "lon": "1.14446554606e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-08",
+        "lat": "3.04602329495e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4464476500783,
+          30.460329650666253
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-01",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#022f4e",
+        "name": "调解办公室东",
+        "lon": "1.14446447650e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-01",
+        "lat": "3.04603296507e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44647854844287,
+          30.460262451558545
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-05",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#d75902",
+        "name": "谈心办公室东北",
+        "lon": "1.14446478548e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-05",
+        "lat": "3.04602624516e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44651586416012,
+          30.460281709844164
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-07",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#08036a",
+        "name": "街坊接待室西北",
+        "lon": "1.14446515864e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-07",
+        "lat": "3.04602817098e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44649549292899,
+          30.460333677947958
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-02",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#5f742d",
+        "name": "调解办公室西",
+        "lon": "1.14446495493e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-02",
+        "lat": "3.04603336779e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44660601400233,
+          30.460241484042154
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-10",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#714a0a",
+        "name": "信访接待室东北角",
+        "lon": "1.14446606014e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-10",
+        "lat": "3.04602414840e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4464859857399,
+          30.460218947740792
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "LYLX-06",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#f5a187",
+        "name": "谈心接待室西北",
+        "lon": "1.14446485986e+002",
+        "type": "录音录像摄像头",
+        "brand": "佛祖岭街道办综治中心/录音录像摄像头/LYLX-06",
+        "lat": "3.04602189477e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44659294161731,
+          30.460270166599987
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-19",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#1fbffe",
+        "name": "信访接待室门(人脸识别)",
+        "lon": "1.14446592942e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭街道办综治中心/人脸识别摄像头/RLSB-19",
+        "lat": "3.04602701666e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44655610125953,
+          30.46026914222305
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-314",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#03367f",
+        "name": "办公室走廊",
+        "lon": "1.14446556101e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-314",
+        "lat": "3.04602691422e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44663810076557,
+          30.460282459122173
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-311",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#e3d666",
+        "name": "走廊西",
+        "lon": "1.14446638101e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-311",
+        "lat": "3.04602824591e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4464705365576,
+          30.460212801475926
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-313",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#48b5b4",
+        "name": "服务大厅西北角",
+        "lon": "1.14446470537e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-313",
+        "lat": "3.04602128015e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44644082659163,
+          30.460252752190893
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-312",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#a97b47",
+        "name": "服务大厅西南角",
+        "lon": "1.14446440827e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-312",
+        "lat": "3.04602527522e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4464111166257,
+          30.460301922279164
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-310",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#cd853e",
+        "name": "办公室门口",
+        "lon": "1.14446411117e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-310",
+        "lat": "3.04603019223e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4464455801862,
+          30.460385921122537
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-20",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#9d2e1b",
+        "name": "楼梯口(人脸识别)",
+        "lon": "1.14446445580e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭街道办综治中心/人脸识别摄像头/RLSB-20",
+        "lat": "3.04603859211e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44636001548425,
+          30.460386945498236
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-309",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#a68314",
+        "name": "办公室西南角",
+        "lon": "1.14446360015e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-309",
+        "lat": "3.04603869455e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44643393387956,
+          30.460218742865337
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-18",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#aae65a",
+        "name": "服务大厅左侧门(人脸识别)",
+        "lon": "1.14446433934e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭街道办综治中心/人脸识别摄像头/RLSB-18",
+        "lat": "3.04602187429e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44640969054734,
+          30.460210138094332
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-17",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#eb3549",
+        "name": "服务大厅右侧门(人脸识别)",
+        "lon": "1.14446409691e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭街道办综治中心/人脸识别摄像头/RLSB-17",
+        "lat": "3.04602101381e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44634266486415,
+          30.46018924079016
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-306",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#f03349",
+        "name": "服务大厅东北角",
+        "lon": "1.14446342665e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-306",
+        "lat": "3.04601892408e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44631414329685,
+          30.460185553030136
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-305",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#cdc948",
+        "name": "其他办公室",
+        "lon": "1.14446314143e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-305",
+        "lat": "3.04601855530e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44632127368867,
+          30.460235952405053
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-304",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#83698c",
+        "name": "服务大厅东南角",
+        "lon": "1.14446321274e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-304",
+        "lat": "3.04602359524e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44629988251317,
+          30.460229806141193
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-303",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#3f7b69",
+        "name": "警务办公室",
+        "lon": "1.14446299883e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-303",
+        "lat": "3.04602298061e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4463112911401,
+          30.46030724903722
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-308",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#9a899b",
+        "name": "办公室东北角",
+        "lon": "1.14446311291e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-308",
+        "lat": "3.04603072490e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44629703035645,
+          30.460333063322203
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-307",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#aa0d1a",
+        "name": "研判大厅西南角",
+        "lon": "1.14446297030e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-307",
+        "lat": "3.04603330633e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44624426545691,
+          30.460317083051336
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-301",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#c91765",
+        "name": "走廊东",
+        "lon": "1.14446244265e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-301",
+        "lat": "3.04603170831e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44624426545691,
+          30.4603355218252
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-302",
+        "address": "佛祖岭街道办综治中心",
+        "color": "#30b1db",
+        "name": "研判大厅东北角",
+        "lon": "1.14446244265e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭街道办综治中心/视频监控摄像头/SPJK-302",
+        "lat": "3.04603355218e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44094049383219,
+          30.442998634938075
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-13",
+        "address": "B区东门出口_门廊(人脸识别)",
+        "color": "#4a0baf",
+        "name": "B区东门出口_门廊(人脸识别)",
+        "lon": "1.14440940494e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区东门出口/人脸识别摄像头/RLSB-13",
+        "lat": "3.04429986349e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44090198971631,
+          30.44307486205863
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-14",
+        "address": "B区东门入口_门廊(人脸识别)",
+        "color": "#958f16",
+        "name": "B区东门入口_门廊(人脸识别)",
+        "lon": "1.14440901990e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区东门入口/人脸识别摄像头/RLSB-14",
+        "lat": "3.04430748621e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44055830483013,
+          30.44274290480793
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-15",
+        "address": "佛祖岭B区36栋1单元门口",
+        "color": "#dcdb56",
+        "name": "B区36栋1单元门口(人脸识别)",
+        "lon": "1.14440558305e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区36栋1单元门口/人脸识别摄像头/RLSB-15",
+        "lat": "3.04427429048e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4408381727094,
+          30.442736450072424
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-16",
+        "address": "佛祖岭B区36栋2单元门口",
+        "color": "#16d220",
+        "name": "B区36栋2单元门口(人脸识别)",
+        "lon": "1.14440838173e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区36栋2单元门口/人脸识别摄像头/RLSB-16",
+        "lat": "3.04427364501e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43823664925077,
+          30.44421334389547
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "CXDZ-05",
+        "address": "佛祖岭B区北门",
+        "color": "#6e4e53",
+        "name": "佛祖岭B区北门出口",
+        "lon": "1.14438236649e+002",
+        "type": "车行道闸",
+        "brand": "佛祖岭B区北门/车行道闸/CXDZ-05",
+        "lat": "3.04442133439e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43982292375293,
+          30.441794976214208
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "CXDZ-01",
+        "address": "佛祖岭B区南门",
+        "color": "#d913cc",
+        "name": "佛祖岭B区南门入口",
+        "lon": "1.14439822924e+002",
+        "type": "车行道闸",
+        "brand": "佛祖岭B区南门/车行道闸/CXDZ-01",
+        "lat": "3.04417949762e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43770697997786,
+          30.442419962595384
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "CXDZ-02",
+        "address": "佛祖岭B区西门",
+        "color": "#e10261",
+        "name": "佛祖岭B区西门出口1",
+        "lon": "1.14437706980e+002",
+        "type": "车行道闸",
+        "brand": "佛祖岭B区西门/车行道闸/CXDZ-02",
+        "lat": "3.04424199626e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43768618300169,
+          30.4424660679894
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "CXDZ-06",
+        "address": "佛祖岭B区西门",
+        "color": "#a79221",
+        "name": "佛祖岭B区西门出口2",
+        "lon": "1.14437686183e+002",
+        "type": "车行道闸",
+        "brand": "佛祖岭B区西门/车行道闸/CXDZ-06",
+        "lat": "3.04424660680e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43767132801871,
+          30.44252498040562
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "CXDZ-03",
+        "address": "佛祖岭B区西门",
+        "color": "#347a66",
+        "name": "佛祖岭B区西门出口3",
+        "lon": "1.14437671328e+002",
+        "type": "车行道闸",
+        "brand": "佛祖岭B区西门/车行道闸/CXDZ-03",
+        "lat": "3.04425249804e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43765053104254,
+          30.442594138413952
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "CXDZ-04",
+        "address": "佛祖岭B区西门",
+        "color": "#0d2831",
+        "name": "佛祖岭B区西门出口4",
+        "lon": "1.14437650531e+002",
+        "type": "车行道闸",
+        "brand": "佛祖岭B区西门/车行道闸/CXDZ-04",
+        "lat": "3.04425941384e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44041449869165,
+          30.442727779722606
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "GYHZTCQ-01",
+        "address": "佛祖岭B区36栋",
+        "color": "#be0048",
+        "name": "感烟火灾探测器",
+        "lon": "1.14440414499e+002",
+        "type": "感烟火灾探测器",
+        "brand": "佛祖岭B区36栋/感烟火灾探测器/GYHZTCQ-01",
+        "lat": "3.04427277797e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44043707826579,
+          30.442747758666293
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SDHZBJAN-01",
+        "address": "佛祖岭B区36栋",
+        "color": "#6f7fad",
+        "name": "手动火灾报警按钮",
+        "lon": "1.14440437078e+002",
+        "type": "手动火灾报警按钮",
+        "brand": "佛祖岭B区36栋/手动火灾报警按钮/SDHZBJAN-01",
+        "lat": "3.04427477587e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44069187093383,
+          30.44356064206128
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "ZJFD-01",
+        "address": "佛祖岭B区34-35栋围墙",
+        "color": "#c6a23c",
+        "name": "34-35栋围墙防区",
+        "lon": "1.14440691871e+002",
+        "type": "周界防盗传感器",
+        "brand": "佛祖岭B区34-35栋围墙/周界防盗传感器/ZJFD-01",
+        "lat": "3.04435606421e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44063767995597,
+          30.442724296214088
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-001",
+        "address": "佛祖岭B区36栋1单元",
+        "color": "#a3fe91",
+        "name": "36栋1单元人脸识别",
+        "lon": "1.14440637680e+002",
+        "type": "人脸识别门禁",
+        "brand": "佛祖岭B区36栋1单元/人脸识别门禁/MJ-001",
+        "lat": "3.04427242962e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44084624391695,
+          30.44270114112468
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-002",
+        "address": "佛祖岭B区36栋2单元",
+        "color": "#d89d21",
+        "name": "36栋2单元人脸识别",
+        "lon": "1.14440846244e+002",
+        "type": "人脸识别门禁",
+        "brand": "佛祖岭B区36栋2单元/人脸识别门禁/MJ-002",
+        "lat": "3.04427011411e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44092574778581,
+          30.44300492316551
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-003",
+        "address": "佛祖岭B区东门入口",
+        "color": "#2c0541",
+        "name": "东门入口人脸识别",
+        "lon": "1.14440925748e+002",
+        "type": "人脸识别门禁",
+        "brand": "佛祖岭B区东门入口/人脸识别门禁/MJ-003",
+        "lat": "3.04430049232e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44089152190502,
+          30.443065167181196
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-004",
+        "address": "佛祖岭B区东门出口",
+        "color": "#063dc1",
+        "name": "东门出口人脸识别",
+        "lon": "1.14440891522e+002",
+        "type": "人脸识别门禁",
+        "brand": "佛祖岭B区东门出口/人脸识别门禁/MJ-004",
+        "lat": "3.04430651672e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44056423692012,
+          30.442730443582047
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-005",
+        "address": "佛祖岭B区36栋1单元",
+        "color": "#90e636",
+        "name": "36栋1单元门口机",
+        "lon": "1.14440564237e+002",
+        "type": "可视对讲门禁",
+        "brand": "佛祖岭B区36栋1单元/可视对讲门禁/MJ-005",
+        "lat": "3.04427304436e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44071361862893,
+          30.442679317960202
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-006",
+        "address": "佛祖岭B区36栋2单元",
+        "color": "#fdde2d",
+        "name": "36栋2单元门口机",
+        "lon": "1.14440713619e+002",
+        "type": "可视对讲门禁",
+        "brand": "佛祖岭B区36栋2单元/可视对讲门禁/MJ-006",
+        "lat": "3.04426793180e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44090150445359,
+          30.442995087404288
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-007",
+        "address": "佛祖岭B区东门入口",
+        "color": "#a84676",
+        "name": "东门入口围墙机",
+        "lon": "1.14440901504e+002",
+        "type": "可视对讲门禁",
+        "brand": "佛祖岭B区东门入口/可视对讲门禁/MJ-007",
+        "lat": "3.04429950874e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44087155680792,
+          30.443068855589114
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "MJ-008",
+        "address": "佛祖岭B区东门出口",
+        "color": "#e0b163",
+        "name": "东门出口围墙机",
+        "lon": "1.14440871557e+002",
+        "type": "可视对讲门禁",
+        "brand": "佛祖岭B区东门出口/可视对讲门禁/MJ-008",
+        "lat": "3.04430688556e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44045470395368,
+          30.442892591150233
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-001",
+        "address": "佛祖岭B区物业入口",
+        "color": "#1d0ecd",
+        "name": "B区物业入口(人员越界)",
+        "lon": "1.14440454704e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区物业入口/视频监控摄像头/SPJK-001",
+        "lat": "3.04428925912e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44066005923833,
+          30.44256432170588
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RYPH-01",
+        "address": "佛祖岭B区36栋",
+        "color": "#888513",
+        "name": "B区36栋(人员徘徊)",
+        "lon": "1.14440660059e+002",
+        "type": "人员徘徊摄像头",
+        "brand": "佛祖岭B区36栋/人员徘徊摄像头/RYPH-01",
+        "lat": "3.04425643217e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43996413299585,
+          30.44207929235772
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-002",
+        "address": "佛祖岭B区南门大屏",
+        "color": "#f61379",
+        "name": "B区南门大屏",
+        "lon": "1.14439964133e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南门大屏/视频监控摄像头/SPJK-002",
+        "lat": "3.04420792924e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44071520093514,
+          30.44256309223023
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "GKPW-01",
+        "address": "佛祖岭B区36栋",
+        "color": "#9d3fab",
+        "name": "B区36栋(高空抛物)",
+        "lon": "1.14440715201e+002",
+        "type": "高空抛物摄像头",
+        "brand": "佛祖岭B区36栋/高空抛物摄像头/GKPW-01",
+        "lat": "3.04425630922e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43997898797883,
+          30.442046711085606
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-02",
+        "address": "佛祖岭B区南门入口",
+        "color": "#d2f9f2",
+        "name": "B区南门入口(人脸识别)",
+        "lon": "1.14439978988e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区南门入口/人脸识别摄像头/RLSB-02",
+        "lat": "3.04420467111e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4384719796659,
+          30.444326041929834
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-07",
+        "address": "佛祖岭B区北门出口",
+        "color": "#d10131",
+        "name": "B区北门出口(人脸识别)",
+        "lon": "1.14438471980e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区北门出口/人脸识别摄像头/RLSB-07",
+        "lat": "3.04443260419e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44036264267251,
+          30.44236921055634
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-03",
+        "address": "佛祖岭B区17栋道口",
+        "color": "#a53346",
+        "name": "B区17栋道口(人脸识别)",
+        "lon": "1.14440362643e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区17栋道口/人脸识别摄像头/RLSB-03",
+        "lat": "3.04423692106e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44045676384465,
+          30.442852804078136
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-04",
+        "address": "佛祖岭B区物业侧门",
+        "color": "#3374ab",
+        "name": "B区物业侧门(人脸识别)",
+        "lon": "1.14440456764e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区物业侧门/人脸识别摄像头/RLSB-04",
+        "lat": "3.04428528041e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43776290181185,
+          30.442593794964782
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-09",
+        "address": "佛祖岭B区西门出口",
+        "color": "#9aea0a",
+        "name": "B区西门出口(人脸识别)",
+        "lon": "1.14437762902e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区西门出口/人脸识别摄像头/RLSB-09",
+        "lat": "3.04425937950e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43781994494647,
+          30.442607319191847
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-10",
+        "address": "佛祖岭B区西门入口",
+        "color": "#460af7",
+        "name": "B区西门入口(人脸识别)",
+        "lon": "1.14437819945e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区西门入口/人脸识别摄像头/RLSB-10",
+        "lat": "3.04426073192e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44002466209983,
+          30.441912458370478
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-01",
+        "address": "佛祖岭B区南门出口",
+        "color": "#79c764",
+        "name": "B区南门出口(人脸识别)",
+        "lon": "1.14440024662e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区南门出口/人脸识别摄像头/RLSB-01",
+        "lat": "3.04419124584e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43847736707308,
+          30.444277136992334
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-08",
+        "address": "佛祖岭B区北门入口",
+        "color": "#686dcd",
+        "name": "B区北门入口(人脸识别)",
+        "lon": "1.14438477367e+002",
+        "type": "人脸识别摄像头",
+        "brand": "佛祖岭B区北门入口/人脸识别摄像头/RLSB-08",
+        "lat": "3.04442771370e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4372899191539,
+          30.44417960025611
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-193",
+        "address": "佛祖岭B区北区-14栋外围",
+        "color": "#63f842",
+        "name": "14栋外围",
+        "lon": "1.14437289919e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-14栋外围/视频监控摄像头/SPJK-193",
+        "lat": "3.04441796003e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43786415337581,
+          30.443902562607516
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-166",
+        "address": "佛祖岭B区北区-13栋车棚",
+        "color": "#aa8039",
+        "name": "13栋车棚",
+        "lon": "1.14437864153e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-13栋车棚/视频监控摄像头/SPJK-166",
+        "lat": "3.04439025626e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43780901167902,
+          30.443879612707825
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-186",
+        "address": "佛祖岭B区北区-14栋1单元",
+        "color": "#4d58ad",
+        "name": "14栋1单元",
+        "lon": "1.14437809012e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-14栋1单元/视频监控摄像头/SPJK-186",
+        "lat": "3.04438796127e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43819833107285,
+          30.44407058849424
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-172",
+        "address": "佛祖岭B区北区-13栋东侧车棚",
+        "color": "#e65d39",
+        "name": "13栋东侧车棚",
+        "lon": "1.14438198331e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-13栋东侧车棚/视频监控摄像头/SPJK-172",
+        "lat": "3.04440705885e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43847047436098,
+          30.444093128530188
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-141",
+        "address": "佛祖岭B区北区-北大门43",
+        "color": "#cdd943",
+        "name": "北大门43",
+        "lon": "1.14438470474e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-北大门43/视频监控摄像头/SPJK-141",
+        "lat": "3.04440931285e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4384490831855,
+          30.44423861409136
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-190",
+        "address": "佛祖岭B区北区-15栋后侧外围",
+        "color": "#5b08c5",
+        "name": "15栋后侧外围",
+        "lon": "1.14438449083e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-15栋后侧外围/视频监控摄像头/SPJK-190",
+        "lat": "3.04442386141e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43867963252127,
+          30.444213512724822
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-195",
+        "address": "佛祖岭B区北区-30栋外围",
+        "color": "#8da571",
+        "name": "30栋外围",
+        "lon": "1.14438679633e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-30栋外围/视频监控摄像头/SPJK-195",
+        "lat": "3.04442135127e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43751143666005,
+          30.44352552785644
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-170",
+        "address": "佛祖岭B区北区-11栋车棚",
+        "color": "#8c155f",
+        "name": "11栋车棚",
+        "lon": "1.14437511437e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-11栋车棚/视频监控摄像头/SPJK-170",
+        "lat": "3.04435255279e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4375756101865,
+          30.44353577338524
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-189",
+        "address": "佛祖岭B区北区-13栋西侧外围",
+        "color": "#a16804",
+        "name": "13栋西侧外围",
+        "lon": "1.14437575610e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-13栋西侧外围/视频监控摄像头/SPJK-189",
+        "lat": "3.04435357734e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43753282783553,
+          30.44357573093732
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-134",
+        "address": "佛祖岭B区北区-11栋通道",
+        "color": "#c07197",
+        "name": "11栋通道",
+        "lon": "1.14437532828e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-11栋通道/视频监控摄像头/SPJK-134",
+        "lat": "3.04435757309e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4387140960818,
+          30.443952765494252
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-139",
+        "address": "佛祖岭B区北区-大队部门前通道48",
+        "color": "#1ddbd5",
+        "name": "大队部门前通道48",
+        "lon": "1.14438714096e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-大队部门前通道48/视频监控摄像头/SPJK-139",
+        "lat": "3.04439527655e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43875212483822,
+          30.44396403552649
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-169",
+        "address": "佛祖岭B区北区-27栋车棚",
+        "color": "#f64b78",
+        "name": "27栋车棚",
+        "lon": "1.14438752125e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-27栋车棚/视频监控摄像头/SPJK-169",
+        "lat": "3.04439640355e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43909557204462,
+          30.4439435445578
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-138",
+        "address": "佛祖岭B区北区-28栋门前通道",
+        "color": "#4d3527",
+        "name": "28栋门前通道",
+        "lon": "1.14439095572e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-28栋门前通道/视频监控摄像头/SPJK-138",
+        "lat": "3.04439435446e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4387212264736,
+          30.443499914029694
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-150",
+        "address": "佛祖岭B区南区-9.10.11.12栋通道",
+        "color": "#09a26e",
+        "name": "9.10.11.12栋通道",
+        "lon": "1.14438721226e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-9.10.11.12栋通道/视频监控摄像头/SPJK-150",
+        "lat": "3.04434999140e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43869745850085,
+          30.443491717603706
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-156",
+        "address": "佛祖岭B区南区-12.27栋通道",
+        "color": "#61b471",
+        "name": "12.27栋通道",
+        "lon": "1.14438697459e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-12.27栋通道/视频监控摄像头/SPJK-156",
+        "lat": "3.04434917176e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4377883335427,
+          30.443170007339656
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-154",
+        "address": "佛祖岭B区南区-11栋9栋通道",
+        "color": "#aa166c",
+        "name": "11栋9栋通道",
+        "lon": "1.14437788334e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-11栋9栋通道/视频监控摄像头/SPJK-154",
+        "lat": "3.04431700073e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43828270737616,
+          30.44313107417836
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-178",
+        "address": "佛祖岭B区南区-7.9栋车棚",
+        "color": "#f91baf",
+        "name": "7.9栋车棚",
+        "lon": "1.14438282707e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-7.9栋车棚/视频监控摄像头/SPJK-178",
+        "lat": "3.04431310742e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43844908318549,
+          30.44319562125308
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-182",
+        "address": "佛祖岭B区南区-10.8栋车棚",
+        "color": "#c7e125",
+        "name": "10.8栋车棚",
+        "lon": "1.14438449083e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-10.8栋车棚/视频监控摄像头/SPJK-182",
+        "lat": "3.04431956213e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4378798402378,
+          30.44290772047891
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-144",
+        "address": "佛祖岭B区南区-5栋西侧通道",
+        "color": "#40964b",
+        "name": "5栋西侧通道",
+        "lon": "1.14437879840e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-5栋西侧通道/视频监控摄像头/SPJK-144",
+        "lat": "3.04429077205e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.437885782231,
+          30.4428790328107
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-160",
+        "address": "佛祖岭B区南区-7栋西侧通道",
+        "color": "#c53566",
+        "name": "7栋西侧通道",
+        "lon": "1.14437885782e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-7栋西侧通道/视频监控摄像头/SPJK-160",
+        "lat": "3.04428790328e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4379392601697,
+          30.442654653971736
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-145",
+        "address": "佛祖岭B区南区-西大门球机42",
+        "color": "#fa0071",
+        "name": "西大门球机42",
+        "lon": "1.14437939260e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-西大门球机42/视频监控摄像头/SPJK-145",
+        "lat": "3.04426546540e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43796183974382,
+          30.4426497360736
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-196",
+        "address": "佛祖岭B区南区-5栋7栋后停车场",
+        "color": "#bc74e2",
+        "name": "5栋7栋后停车场",
+        "lon": "1.14437961840e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-5栋7栋后停车场/视频监控摄像头/SPJK-196",
+        "lat": "3.04426497361e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43847594099468,
+          30.442829853931293
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-161",
+        "address": "佛祖岭B区南区-8.6栋通道",
+        "color": "#d104d1",
+        "name": "8.6栋通道",
+        "lon": "1.14438475941e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-8.6栋通道/视频监控摄像头/SPJK-161",
+        "lat": "3.04428298539e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43805524787678,
+          30.44230302362918
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-179",
+        "address": "佛祖岭B区南区-5.3栋车棚",
+        "color": "#a50766",
+        "name": "5.3栋车棚",
+        "lon": "1.14438055248e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-5.3栋车棚/视频监控摄像头/SPJK-179",
+        "lat": "3.04423030236e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43865919206466,
+          30.442389701855884
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-148",
+        "address": "佛祖岭B区南区-5栋6栋通道",
+        "color": "#aa7e58",
+        "name": "5栋6栋通道",
+        "lon": "1.14438659192e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-5栋6栋通道/视频监控摄像头/SPJK-148",
+        "lat": "3.04423897019e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43860500108677,
+          30.442163477669688
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-184",
+        "address": "佛祖岭B区南区-1栋车棚",
+        "color": "#6efea0",
+        "name": "1栋车棚",
+        "lon": "1.14438605001e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-1栋车棚/视频监控摄像头/SPJK-184",
+        "lat": "3.04421634777e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43816862110684,
+          30.441904056897005
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-147",
+        "address": "佛祖岭B区南区-1栋门前通道",
+        "color": "#5d71ab",
+        "name": "1栋门前通道",
+        "lon": "1.14438168621e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-1栋门前通道/视频监控摄像头/SPJK-147",
+        "lat": "3.04419040569e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43821354257538,
+          30.44190713060688
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-157",
+        "address": "佛祖岭B区南区-3栋西侧通道",
+        "color": "#aedf77",
+        "name": "3栋西侧通道",
+        "lon": "1.14438213543e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-3栋西侧通道/视频监控摄像头/SPJK-157",
+        "lat": "3.04419071306e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43832192453117,
+          30.441679061070747
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-197",
+        "address": "佛祖岭B区南区-1栋外围",
+        "color": "#ab2196",
+        "name": "1栋外围",
+        "lon": "1.14438321925e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-1栋外围/视频监控摄像头/SPJK-197",
+        "lat": "3.04416790611e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4394135875201,
+          30.44187393453507
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-200",
+        "address": "佛祖岭B区南区-2栋外围",
+        "color": "#18eddc",
+        "name": "2栋外围",
+        "lon": "1.14439413588e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-2栋外围/视频监控摄像头/SPJK-200",
+        "lat": "3.04418739345e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4392336639663,
+          30.442380685684586
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-176",
+        "address": "佛祖岭B区南区-2栋车棚",
+        "color": "#76646a",
+        "name": "2栋车棚",
+        "lon": "1.14439233664e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-2栋车棚/视频监控摄像头/SPJK-176",
+        "lat": "3.04423806857e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44002038386473,
+          30.4418048784729
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-151",
+        "address": "佛祖岭B区南区-南大门广场球机41",
+        "color": "#59e6b3",
+        "name": "南大门广场球机41",
+        "lon": "1.14440020384e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-南大门广场球机41/视频监控摄像头/SPJK-151",
+        "lat": "3.04418048785e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43993006556823,
+          30.442193190115386
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-153",
+        "address": "佛祖岭B区南区-16栋道路",
+        "color": "#e13772",
+        "name": "16栋道路",
+        "lon": "1.14439930066e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-16栋道路/视频监控摄像头/SPJK-153",
+        "lat": "3.04421931901e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43997522471649,
+          30.442208558618226
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-152",
+        "address": "佛祖岭B区南区-南门广场入口",
+        "color": "#fc7da9",
+        "name": "南门广场入口",
+        "lon": "1.14439975225e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-南门广场入口/视频监控摄像头/SPJK-152",
+        "lat": "3.04422085586e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43994432635189,
+          30.44222085341876
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-164",
+        "address": "佛祖岭B区南区-17栋通道南门",
+        "color": "#479f4b",
+        "name": "17栋通道南门",
+        "lon": "1.14439944326e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-17栋通道南门/视频监控摄像头/SPJK-164",
+        "lat": "3.04422208534e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43969951623245,
+          30.442461626283364
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-173",
+        "address": "佛祖岭B区南区-18栋20栋车棚",
+        "color": "#ffe884",
+        "name": "18栋20栋车棚",
+        "lon": "1.14439699516e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-18栋20栋车棚/视频监控摄像头/SPJK-173",
+        "lat": "3.04424616263e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43974111018478,
+          30.442471871923978
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-174",
+        "address": "佛祖岭B区南区-19栋21栋车棚",
+        "color": "#a013e5",
+        "name": "19栋21栋车棚",
+        "lon": "1.14439741110e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-19栋21栋车棚/视频监控摄像头/SPJK-174",
+        "lat": "3.04424718719e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4392491131486,
+          30.44263990027658
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-198",
+        "address": "佛祖岭B区南区-6栋东侧",
+        "color": "#7ffbdb",
+        "name": "6栋东侧",
+        "lon": "1.14439249113e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-6栋东侧/视频监控摄像头/SPJK-198",
+        "lat": "3.04426399003e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43928119991183,
+          30.442648096774167
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-149",
+        "address": "佛祖岭B区南区-20栋22栋通道",
+        "color": "#46df27",
+        "name": "20栋22栋通道",
+        "lon": "1.14439281200e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-20栋22栋通道/视频监控摄像头/SPJK-149",
+        "lat": "3.04426480968e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43927050432409,
+          30.442617359904627
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-201",
+        "address": "佛祖岭B区南区-20.4栋通道",
+        "color": "#c8d9a6",
+        "name": "20.4栋通道",
+        "lon": "1.14439270504e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-20.4栋通道/视频监控摄像头/SPJK-201",
+        "lat": "3.04426173599e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43918375122351,
+          30.442881696665967
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-175",
+        "address": "佛祖岭B区南区-22栋车棚",
+        "color": "#abd51e",
+        "name": "22栋车棚",
+        "lon": "1.14439183751e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-22栋车棚/视频监控摄像头/SPJK-175",
+        "lat": "3.04428816967e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43965079188828,
+          30.442767970472765
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-146",
+        "address": "佛祖岭B区南区-22栋23栋通道",
+        "color": "#3d10e0",
+        "name": "22栋23栋通道",
+        "lon": "1.14439650792e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-22栋23栋通道/视频监控摄像头/SPJK-146",
+        "lat": "3.04427679705e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43966029907739,
+          30.442743381008142
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-155",
+        "address": "佛祖岭B区南区-20.21栋通道",
+        "color": "#61a2a7",
+        "name": "20.21栋通道",
+        "lon": "1.14439660299e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-20.21栋通道/视频监控摄像头/SPJK-155",
+        "lat": "3.04427433810e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43962702391552,
+          30.443020012127555
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-199",
+        "address": "佛祖岭B区南区-23栋健身场45-2",
+        "color": "#8156da",
+        "name": "23栋健身场45-2",
+        "lon": "1.14439627024e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-23栋健身场45-2/视频监控摄像头/SPJK-199",
+        "lat": "3.04430200121e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44059984704069,
+          30.44235630103532
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-183",
+        "address": "佛祖岭B区南区-37.38栋车棚",
+        "color": "#362214",
+        "name": "37.38栋车棚",
+        "lon": "1.14440599847e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-37.38栋车棚/视频监控摄像头/SPJK-183",
+        "lat": "3.04423563010e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44111608740909,
+          30.442383349553438
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-162",
+        "address": "佛祖岭B区南区-商业街46-2",
+        "color": "#315802",
+        "name": "商业街46-2",
+        "lon": "1.14441116087e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-商业街46-2/视频监控摄像头/SPJK-162",
+        "lat": "3.04423833496e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44111608740909,
+          30.442541952076958
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-202",
+        "address": "佛祖岭B区南区-商业街46-1",
+        "color": "#f3a56d",
+        "name": "商业街46-1",
+        "lon": "1.14441116087e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-商业街46-1/视频监控摄像头/SPJK-202",
+        "lat": "3.04425419521e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44094353192682,
+          30.442613261654607
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-203",
+        "address": "佛祖岭B区南区-商业街46-3",
+        "color": "#26ab6a",
+        "name": "商业街46-3",
+        "lon": "1.14440943532e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-商业街46-3/视频监控摄像头/SPJK-203",
+        "lat": "3.04426132617e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44044868273392,
+          30.442532116269057
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-159",
+        "address": "佛祖岭B区南区-37.38栋西侧通道",
+        "color": "#f293b1",
+        "name": "37.38栋西侧通道",
+        "lon": "1.14440448683e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-37.38栋西侧通道/视频监控摄像头/SPJK-159",
+        "lat": "3.04425321163e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44047435214449,
+          30.442705472238032
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-158",
+        "address": "佛祖岭B区南区-36栋西侧通道",
+        "color": "#f843f6",
+        "name": "36栋西侧通道",
+        "lon": "1.14440474352e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-36栋西侧通道/视频监控摄像头/SPJK-158",
+        "lat": "3.04427054722e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44053127643926,
+          30.44264297396325
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-180",
+        "address": "佛祖岭B区南区-36.37栋车棚",
+        "color": "#932b82",
+        "name": "36.37栋车棚",
+        "lon": "1.14440531276e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-36.37栋车棚/视频监控摄像头/SPJK-180",
+        "lat": "3.04426429740e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44046151743919,
+          30.442987021346376
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-135",
+        "address": "佛祖岭B区北区-36栋南侧通道",
+        "color": "#4f29e8",
+        "name": "36栋南侧通道",
+        "lon": "1.14440461517e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-36栋南侧通道/视频监控摄像头/SPJK-135",
+        "lat": "3.04429870213e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44049574331999,
+          30.442984562405723
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-137",
+        "address": "佛祖岭B区北区-36栋北侧通道",
+        "color": "#0c4c4d",
+        "name": "36栋北侧通道",
+        "lon": "1.14440495743e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-36栋北侧通道/视频监控摄像头/SPJK-137",
+        "lat": "3.04429845624e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44089361918404,
+          30.442977185583384
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-142",
+        "address": "佛祖岭B区北区-物业中心球机47",
+        "color": "#c13823",
+        "name": "物业中心球机47",
+        "lon": "1.14440893619e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-物业中心球机47/视频监控摄像头/SPJK-142",
+        "lat": "3.04429771856e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44101483584511,
+          30.44300177498903
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-143",
+        "address": "佛祖岭B区北区-东大门40",
+        "color": "#836bdc",
+        "name": "东大门40",
+        "lon": "1.14441014836e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-东大门40/视频监控摄像头/SPJK-143",
+        "lat": "3.04430017750e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44099914898308,
+          30.44349970911905
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-167",
+        "address": "佛祖岭B区北区-35栋车棚",
+        "color": "#ed547a",
+        "name": "35栋车棚",
+        "lon": "1.14440999149e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-35栋车棚/视频监控摄像头/SPJK-167",
+        "lat": "3.04434997091e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44108328760667,
+          30.44351815107503
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-192",
+        "address": "佛祖岭B区北区-35栋1单元外围",
+        "color": "#4fc45b",
+        "name": "35栋1单元外围",
+        "lon": "1.14441083288e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-35栋1单元外围/视频监控摄像头/SPJK-192",
+        "lat": "3.04435181511e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4404272915584,
+          30.443835352171728
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-132",
+        "address": "佛祖岭B区北区-地下车库出口",
+        "color": "#ddf96b",
+        "name": "地下车库出口",
+        "lon": "1.14440427292e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-地下车库出口/视频监控摄像头/SPJK-132",
+        "lat": "3.04438353522e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44066972488058,
+          30.443877153789668
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-168",
+        "address": "佛祖岭B区北区-34栋车棚",
+        "color": "#bb0611",
+        "name": "34栋车棚",
+        "lon": "1.14440669725e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-34栋车棚/视频监控摄像头/SPJK-168",
+        "lat": "3.04438771538e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44068826389936,
+          30.44445622730016
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-185",
+        "address": "佛祖岭B区北区-33栋外围",
+        "color": "#6eaf39",
+        "name": "33栋外围",
+        "lon": "1.14440688264e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-33栋外围/视频监控摄像头/SPJK-185",
+        "lat": "3.04444562273e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44019769294155,
+          30.44415132278072
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-140",
+        "address": "佛祖岭B区北区-32栋门前通道",
+        "color": "#3be385",
+        "name": "32栋门前通道",
+        "lon": "1.14440197693e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-32栋门前通道/视频监控摄像头/SPJK-140",
+        "lat": "3.04441513228e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44023049274396,
+          30.444155011147544
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-136",
+        "address": "佛祖岭B区北区-32栋南侧拐角通道",
+        "color": "#f16b86",
+        "name": "32栋南侧拐角通道",
+        "lon": "1.14440230493e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-32栋南侧拐角通道/视频监控摄像头/SPJK-136",
+        "lat": "3.04441550111e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44035883979687,
+          30.44434680602992
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-191",
+        "address": "佛祖岭B区北区-32栋后侧外围",
+        "color": "#d525ab",
+        "name": "32栋后侧外围",
+        "lon": "1.14440358840e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-32栋后侧外围/视频监控摄像头/SPJK-191",
+        "lat": "3.04443468060e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44040162214785,
+          30.444348035483063
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-187",
+        "address": "佛祖岭B区北区-32栋外围",
+        "color": "#c86e12",
+        "name": "32栋外围",
+        "lon": "1.14440401622e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-32栋外围/视频监控摄像头/SPJK-187",
+        "lat": "3.04443480355e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43975418256977,
+          30.44432959368409
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-194",
+        "address": "佛祖岭B区北区-31栋外围",
+        "color": "#3b611f",
+        "name": "31栋外围",
+        "lon": "1.14439754183e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-31栋外围/视频监控摄像头/SPJK-194",
+        "lat": "3.04443295937e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44056847331662,
+          30.443539051954247
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-188",
+        "address": "佛祖岭B区北区-34栋35栋中间草棚",
+        "color": "#2530b1",
+        "name": "34栋35栋中间草棚",
+        "lon": "1.14440568473e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-34栋35栋中间草棚/视频监控摄像头/SPJK-188",
+        "lat": "3.04435390520e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43911672554029,
+          30.442657522745545
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-181",
+        "address": "佛祖岭B区南区-4.6栋车棚",
+        "color": "#bb8a7d",
+        "name": "4.6栋车棚",
+        "lon": "1.14439116726e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-4.6栋车棚/视频监控摄像头/SPJK-181",
+        "lat": "3.04426575227e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43941715271602,
+          30.443366517111212
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-177",
+        "address": "佛祖岭B区南区-24.25栋车棚",
+        "color": "#bc950b",
+        "name": "24.25栋车棚",
+        "lon": "1.14439417153e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区南区-24.25栋车棚/视频监控摄像头/SPJK-177",
+        "lat": "3.04433665171e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43989821648472,
+          30.44312226298707
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-171",
+        "address": "佛祖岭B区北区-健身场45-1",
+        "color": "#5c2bf5",
+        "name": "健身场45-1",
+        "lon": "1.14439898216e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-健身场45-1/视频监控摄像头/SPJK-171",
+        "lat": "3.04431222630e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44006934588862,
+          30.443169802428326
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-163",
+        "address": "佛祖岭B区北区-篮球场球机44",
+        "color": "#44bad7",
+        "name": "篮球场球机44",
+        "lon": "1.14440069346e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-篮球场球机44/视频监控摄像头/SPJK-163",
+        "lat": "3.04431698024e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43970807270263,
+          30.44372060254012
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-165",
+        "address": "佛祖岭B区北区-26栋车棚",
+        "color": "#ff8ccb",
+        "name": "26栋车棚",
+        "lon": "1.14439708073e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-26栋车棚/视频监控摄像头/SPJK-165",
+        "lat": "3.04437206025e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44018913647133,
+          30.443427170725027
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-131",
+        "address": "佛祖岭B区北区-35栋通道",
+        "color": "#b70d63",
+        "name": "35栋通道",
+        "lon": "1.14440189136e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区北区-35栋通道/视频监控摄像头/SPJK-131",
+        "lat": "3.04434271707e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44056276900318,
+          30.4429384572569
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-133",
+        "address": "佛祖岭B区监控室-监控室49",
+        "color": "#d9d9e1",
+        "name": "监控室49",
+        "lon": "1.14440562769e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区监控室-监控室49/视频监控摄像头/SPJK-133",
+        "lat": "3.04429384573e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43979162897512,
+          30.442853319992423
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-114",
+        "address": "佛祖岭B区车库-14A区",
+        "color": "#b1d181",
+        "name": "14A区",
+        "lon": "1.14439791629e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-14A区/视频监控摄像头/SPJK-114",
+        "lat": "3.04428533200e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43922404978555,
+          30.442786928481834
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-109",
+        "address": "佛祖岭B区车库-9A区",
+        "color": "#b506f8",
+        "name": "9A区",
+        "lon": "1.14439224050e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-9A区/视频监控摄像头/SPJK-109",
+        "lat": "3.04427869285e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4391769891995,
+          30.442630785306513
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-112",
+        "address": "佛祖岭B区车库-12A区",
+        "color": "#c53a60",
+        "name": "12A区",
+        "lon": "1.14439176989e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-12A区/视频监控摄像头/SPJK-112",
+        "lat": "3.04426307853e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43903010312783,
+          30.442663981120635
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-204",
+        "address": "佛祖岭B区车库-27C区",
+        "color": "#d05691",
+        "name": "27C区",
+        "lon": "1.14439030103e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-27C区/视频监控摄像头/SPJK-204",
+        "lat": "3.04426639811e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43900300763886,
+          30.442740208502848
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-116",
+        "address": "佛祖岭B区车库-16A区",
+        "color": "#c5bb32",
+        "name": "16A区",
+        "lon": "1.14439003008e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-16A区/视频监控摄像头/SPJK-116",
+        "lat": "3.04427402085e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43872920059265,
+          30.442630785306513
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-103",
+        "address": "佛祖岭B区车库-3A区",
+        "color": "#63cde3",
+        "name": "3A区",
+        "lon": "1.14438729201e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-3A区/视频监控摄像头/SPJK-103",
+        "lat": "3.04426307853e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44008254896171,
+          30.4431127382392
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-124",
+        "address": "佛祖岭B区车库-24B区",
+        "color": "#f868ed",
+        "name": "24B区",
+        "lon": "1.14440082549e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-24B区/视频监控摄像头/SPJK-124",
+        "lat": "3.04431127382e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43978877681838,
+          30.44309675514442
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-117",
+        "address": "佛祖岭B区车库-17A区",
+        "color": "#e3d026",
+        "name": "17A区",
+        "lon": "1.14439788777e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-17A区/视频监控摄像头/SPJK-117",
+        "lat": "3.04430967551e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43889890391819,
+          30.442982414466908
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-128",
+        "address": "佛祖岭B区车库-29B区",
+        "color": "#24ee06",
+        "name": "29B区",
+        "lon": "1.14438898904e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-29B区/视频监控摄像头/SPJK-128",
+        "lat": "3.04429824145e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43860941000993,
+          30.442913564101797
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-129",
+        "address": "佛祖岭B区车库-30B区",
+        "color": "#04111b",
+        "name": "30B区",
+        "lon": "1.14438609410e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-30B区/视频监控摄像头/SPJK-129",
+        "lat": "3.04429135641e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43817730826513,
+          30.44286561471165
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-123",
+        "address": "佛祖岭B区车库-23B区",
+        "color": "#a381f9",
+        "name": "23B区",
+        "lon": "1.14438177308e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-23B区/视频监控摄像头/SPJK-123",
+        "lat": "3.04428656147e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43928251899852,
+          30.443251258284164
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-115",
+        "address": "佛祖岭B区车库-15C区",
+        "color": "#068edf",
+        "name": "15C区",
+        "lon": "1.14439282519e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-15C区/视频监控摄像头/SPJK-115",
+        "lat": "3.04432512583e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43975169878085,
+          30.443368057577388
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-104",
+        "address": "佛祖岭B区车库-4C区",
+        "color": "#03cdd0",
+        "name": "4C区",
+        "lon": "1.14439751699e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-4C区/视频监控摄像头/SPJK-104",
+        "lat": "3.04433680576e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43975312485921,
+          30.443407400465727
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-127",
+        "address": "佛祖岭B区车库-28C区",
+        "color": "#37374c",
+        "name": "28C区",
+        "lon": "1.14439753125e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-28C区/视频监控摄像头/SPJK-127",
+        "lat": "3.04434074005e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43950641330194,
+          30.443633621765454
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-108",
+        "address": "佛祖岭B区车库-8C区",
+        "color": "#9654b8",
+        "name": "8C区",
+        "lon": "1.14439506413e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-8C区/视频监控摄像头/SPJK-108",
+        "lat": "3.04436336218e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4391213721432,
+          30.443744273296982
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-102",
+        "address": "佛祖岭B区车库-2C区",
+        "color": "#e2fd7a",
+        "name": "2C区",
+        "lon": "1.14439121372e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-2C区/视频监控摄像头/SPJK-102",
+        "lat": "3.04437442733e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4391898239048,
+          30.443509446008314
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-106",
+        "address": "佛祖岭B区车库-6C区",
+        "color": "#238dc5",
+        "name": "6C区",
+        "lon": "1.14439189824e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-6C区/视频监控摄像头/SPJK-106",
+        "lat": "3.04435094460e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43889462568306,
+          30.44348116833853
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-113",
+        "address": "佛祖岭B区车库-13C区",
+        "color": "#1e6ea4",
+        "name": "13C区",
+        "lon": "1.14438894626e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-13C区/视频监控摄像头/SPJK-113",
+        "lat": "3.04434811683e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43813024767907,
+          30.443301666417348
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-120",
+        "address": "佛祖岭B区车库-20C区",
+        "color": "#fad15b",
+        "name": "20C区",
+        "lon": "1.14438130248e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-20C区/视频监控摄像头/SPJK-120",
+        "lat": "3.04433016664e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43802757003675,
+          30.44314183566142
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-119",
+        "address": "佛祖岭B区车库-19C区",
+        "color": "#8f392a",
+        "name": "19C区",
+        "lon": "1.14438027570e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-19C区/视频监控摄像头/SPJK-119",
+        "lat": "3.04431418357e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43824433394832,
+          30.443129540977043
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-105",
+        "address": "佛祖岭B区车库-5C区",
+        "color": "#2addcc",
+        "name": "5C区",
+        "lon": "1.14438244334e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-5C区/视频监控摄像头/SPJK-105",
+        "lat": "3.04431295410e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43879052196239,
+          30.44322789840871
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-107",
+        "address": "佛祖岭B区车库-7C区",
+        "color": "#9ac845",
+        "name": "7C区",
+        "lon": "1.14438790522e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-7C区/视频监控摄像头/SPJK-107",
+        "lat": "3.04432278984e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43895309489608,
+          30.44326970028713
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-110",
+        "address": "佛祖岭B区车库-10C区",
+        "color": "#e12f82",
+        "name": "10C区",
+        "lon": "1.14438953095e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-10C区/视频监控摄像头/SPJK-110",
+        "lat": "3.04432697003e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.4401167748425,
+          30.444152453415963
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-126",
+        "address": "佛祖岭B区车库-26D区",
+        "color": "#3e2fc4",
+        "name": "26D区",
+        "lon": "1.14440116775e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-26D区/视频监控摄像头/SPJK-126",
+        "lat": "3.04441524534e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43960909094429,
+          30.444066391484867
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-130",
+        "address": "佛祖岭B区车库-31D区",
+        "color": "#5bb24d",
+        "name": "31D区",
+        "lon": "1.14439609091e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-31D区/视频监控摄像头/SPJK-130",
+        "lat": "3.04440663915e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43952352624235,
+          30.444103275178925
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-125",
+        "address": "佛祖岭B区车库-25D区",
+        "color": "#f4c738",
+        "name": "25D区",
+        "lon": "1.14439523526e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-25D区/视频监控摄像头/SPJK-125",
+        "lat": "3.04441032752e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43884043470517,
+          30.444007377545343
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-101",
+        "address": "佛祖岭B区车库-1D区",
+        "color": "#288557",
+        "name": "1D区",
+        "lon": "1.14438840435e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-1D区/视频监控摄像头/SPJK-101",
+        "lat": "3.04440073775e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43829282061276,
+          30.443926233320177
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-118",
+        "address": "佛祖岭B区车库-18D区",
+        "color": "#c1403a",
+        "name": "18D区",
+        "lon": "1.14438292821e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-18D区/视频监控摄像头/SPJK-118",
+        "lat": "3.04439262333e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43777087593094,
+          30.443861071999553
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-121",
+        "address": "佛祖岭B区车库-21D区",
+        "color": "#8e1e40",
+        "name": "21D区",
+        "lon": "1.14437770876e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-21D区/视频监控摄像头/SPJK-121",
+        "lat": "3.04438610720e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43884186078357,
+          30.44370493054462
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-122",
+        "address": "佛祖岭B区车库-22D区",
+        "color": "#7ed5be",
+        "name": "22D区",
+        "lon": "1.14438841861e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-22D区/视频监控摄像头/SPJK-122",
+        "lat": "3.04437049305e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.43826144688872,
+          30.443634851227618
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-111",
+        "address": "佛祖岭B区车库-11D区",
+        "color": "#5c79dd",
+        "name": "11D区",
+        "lon": "1.14438261447e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区车库-11D区/视频监控摄像头/SPJK-111",
+        "lat": "3.04436348512e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44060748444663,
+          30.442787681533968
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-003",
+        "address": "佛祖岭B区1单元1楼大厅",
+        "color": "#50dc2f",
+        "name": "B区36栋1单元1楼大厅",
+        "lon": "1.14440607484e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区36栋1单元1楼大厅/视频监控摄像头/SPJK-003",
+        "lat": "3.04427876815e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44084991776879,
+          30.442783993115427
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "SPJK-004",
+        "address": "佛祖岭B区36楼2单元1楼大厅",
+        "color": "#a3b9b5",
+        "name": "B区36栋2单元1楼大厅",
+        "lon": "1.14440849918e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区36栋2单元1楼大厅/视频监控摄像头/SPJK-004",
+        "lat": "3.04427839931e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44099482098802,
+          30.4429630562963
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-11",
+        "address": "佛祖岭B区东门入口",
+        "color": "#23f8e6",
+        "name": "B区东门入口(人脸识别)",
+        "lon": "1.14440994821e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区东门入口/人脸识别摄像头/RLSB-11",
+        "lat": "3.04429630563e+001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          114.44093540105611,
+          30.4429630562963
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "no": "RLSB-12",
+        "address": "佛祖岭B区东门出口",
+        "color": "#f1e5d4",
+        "name": "B区东门出口(人脸识别)",
+        "lon": "1.14440935401e+002",
+        "type": "视频监控摄像头",
+        "brand": "佛祖岭B区东门出口/人脸识别摄像头/RLSB-12",
+        "lat": "3.04429630563e+001"
+      }
+    }
+  ]
+}
